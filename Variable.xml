@@ -507,6 +507,11 @@
           <Address>172.21.80.29</Address>
         </IP>
       </NetworkAdapter>
+	  <DataDisks>
+        <Count>1</Count>
+        <Format>VHDX</Format>
+        <Size>150</Size>
+      </DataDisks>
     </VM>
     <VM Count="10">
       <VMName>PDC-SC-O1</VMName>
@@ -543,6 +548,11 @@
           <Address>172.21.80.33</Address>
         </IP>
       </NetworkAdapter>
+	  <DataDisks>
+        <Count>1</Count>
+        <Format>VHDX</Format>
+        <Size>150</Size>
+      </DataDisks>
     </VM>
     <VM Count="14">
       <VMName>PDC-SC-SPF1</VMName>
