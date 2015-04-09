@@ -7,8 +7,8 @@
   <Variable Name="RegisteredUser" Value="Intel MEE Private Cloud" />
   <Variable Name="RegisteredOrganization" Value="Intel MEE Private Cloud" />
   <Variable Name="InstallerServiceAccount" Value="MEE\!Installer" />
-  <Variable Name="InstallerServiceAccountPassword" Value="spl@intel1" />
-  <Variable Name="SourcePath" Value="W:\Workspace\Installer" />
+  <Variable Name="InstallerServiceAccountPassword" Value="!Reset123" />
+  <Variable Name="SourcePath" Value="$SystemDrive\Source" />
   <Variable Name="Download" Value="W:\Workspace\Installer" />
   <Components>
     <Component Name="System Center 2012 R2 Virtual Machine Manager">
@@ -16,31 +16,31 @@
       <Variable Name="SystemCenter2012R2VirtualMachineManagerAdminGroup" Value="MEE\VMMAdmins" />
       <Variable Name="SystemCenter2012R2VirtualMachineManagerBitsTcpPort" Value="444" />
       <Variable Name="SystemCenter2012R2VirtualMachineManagerServiceAccount" Value="MEE\svcvmm" />
-      <Variable Name="SystemCenter2012R2VirtualMachineManagerServiceAccountPassword" Value="spl@intel1" />
+      <Variable Name="SystemCenter2012R2VirtualMachineManagerServiceAccountPassword" Value="!Reset123" />
     </Component>
     <Component Name="System Center 2012 R2 Service Provider Foundation">
       <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCVMMServiceAccount" Value="MEE\svcspf" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCVMMServiceAccountPassword" Value="spl@intel1" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCVMMServiceAccountPassword" Value="!Reset123" />
       <Variable Name="SystemCenter2012R2ServiceProviderFoundationVMMSecurityGroupUsers" Value="MEE\SPFAdmins" />
       <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCAdminServiceAccount" Value="MEE\svcspf" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCAdminServiceAccountPassword" Value="spl@intel1" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCAdminServiceAccountPassword" Value="!Reset123" />
       <Variable Name="SystemCenter2012R2ServiceProviderFoundationAdminSecurityGroupUsers" Value="MEE\SPFAdmins" />
       <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCProviderServiceAccount" Value="MEE\svcspf" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCProviderServiceAccountPassword" Value="spl@intel1" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCProviderServiceAccountPassword" Value="!Reset123" />
       <Variable Name="SystemCenter2012R2ServiceProviderFoundationProviderSecurityGroupUsers" Value="MEE\SPFAdmins" />
       <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCUsageServiceAccount" Value="MEE\svcspf" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCUsageServiceAccountPassword" Value="spl@intel1" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCUsageServiceAccountPassword" Value="!Reset123" />
       <Variable Name="SystemCenter2012R2ServiceProviderFoundationUsageSecurityGroupUsers" Value="MEE\SPFAdmins" />
     </Component>
     <Component Name="System Center 2012 R2 Service Management Automation">
       <Variable Name="SystemCenter2012R2ServiceManagementAutomationInstallFolder" Value="C:\Program Files\Microsoft System Center 2012 R2\Service Management Automation" />
       <Variable Name="SystemCenter2012R2ServiceManagementAutomationServiceAccount" Value="MEE\svcsma" />
-      <Variable Name="SystemCenter2012R2ServiceManagementAutomationServiceAccountPassword" Value="spl@intel1" />
+      <Variable Name="SystemCenter2012R2ServiceManagementAutomationServiceAccountPassword" Value="!Reset123" />
       <Variable Name="SystemCenter2012R2ServiceManagementAutomationAdminGroup" Value="MEE\SMAAdmins" />
     </Component>
     <Component Name="Windows Azure Pack 2013">
       <Variable Name="WindowsAzurePack2013AdminGroup" Value="MEE\WAPAdmins" />
-      <Variable Name="WindowsAzurePack2013ConfigStorePassphrase" Value="spl@intel1" />
+      <Variable Name="WindowsAzurePack2013ConfigStorePassphrase" Value="!Reset123" />
     </Component>
   </Components>
   <Roles>
@@ -76,9 +76,9 @@
       <Variable Name="SQLTempDBDir" Value="C:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
       <Variable Name="SQLTempDBLogDir" Value="C:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
       <Variable Name="SQLAgtServiceAccount" Value="MEE\svcsql" />
-      <Variable Name="SQLAgtServiceAccountPassword" Value="spl@intel1" />
+      <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
       <Variable Name="SQLServiceAccount" Value="MEE\svcsql" />
-      <Variable Name="SQLServiceAccountPassword" Value="spl@intel1" />
+      <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
     </Instance>
   </SQL>
   <VMs>
@@ -129,12 +129,12 @@
         <Domain>MEE.local</Domain>
         <Credentials>
           <Domain>MEE.local</Domain>
-          <Password>spc@intel1</Password>
+          <Password>!Reset123</Password>
           <Username>!installer</Username>
         </Credentials>
         <OrganizationalUnit>Servers</OrganizationalUnit>
       </JoinDomain>
-      <AdministratorPassword>spc@intel1</AdministratorPassword>
+      <AdministratorPassword>!Reset123</AdministratorPassword>
       <TimeZone>GMT Standard Time</TimeZone>
     </Default>
     <Domain>
