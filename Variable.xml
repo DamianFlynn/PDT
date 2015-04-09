@@ -362,7 +362,7 @@
 	
   </SQL>
   <VMs>
-    <Count>37</Count>
+    <Count>30</Count>
     <Default>
       <Host>Localhost</Host>
       <VMFolder>V:\Resources\Pool 1\Resources\CloudOS2012R2.local</VMFolder>
