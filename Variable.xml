@@ -582,106 +582,8 @@
       </NetworkAdapter>
       <VMGeneration>1</VMGeneration>
     </VM>
-    <VM Count="18">
-      <VMName>PDC-DB-SCDB1</VMName>
-      <NetworkAdapter>
-        <VLANID>180</VLANID>
-        <IP>
-          <Address>172.21.80.38</Address>
-        </IP>
-      </NetworkAdapter>
-      <DataDisks>
-        <Count>1</Count>
-        <Format>VHDX</Format>
-        <Size>150</Size>
-      </DataDisks>
-    </VM>
-    <VM Count="19">
-      <VMName>PDC-DB-SCVMM1</VMName>
-      <NetworkAdapter>
-        <VLANID>180</VLANID>
-        <IP>
-          <Address>172.21.80.39</Address>
-        </IP>
-      </NetworkAdapter>
-      <DataDisks>
-        <Count>1</Count>
-        <Format>VHDX</Format>
-        <Size>150</Size>
-      </DataDisks>
-    </VM>
-    <VM Count="20">
-      <VMName>PDC-DB-SCOMDB1</VMName>
-      <NetworkAdapter>
-        <VLANID>180</VLANID>
-        <IP>
-          <Address>172.21.80.40</Address>
-        </IP>
-      </NetworkAdapter>
-      <DataDisks>
-        <Count>1</Count>
-        <Format>VHDX</Format>
-        <Size>150</Size>
-      </DataDisks>
-    </VM>
-    <VM Count="21">
-      <VMName>PDC-DB-SCOMDW1</VMName>
-      <NetworkAdapter>
-        <VLANID>180</VLANID>
-        <IP>
-          <Address>172.21.80.41</Address>
-        </IP>
-      </NetworkAdapter>
-      <DataDisks>
-        <Count>1</Count>
-        <Format>VHDX</Format>
-        <Size>150</Size>
-      </DataDisks>
-    </VM>
-    <VM Count="22">
-      <VMName>PDC-DB-SCSMDB1</VMName>
-      <NetworkAdapter>
-        <VLANID>180</VLANID>
-        <IP>
-          <Address>172.21.80.42</Address>
-        </IP>
-      </NetworkAdapter>
-      <DataDisks>
-        <Count>1</Count>
-        <Format>VHDX</Format>
-        <Size>150</Size>
-      </DataDisks>
-    </VM>
-    <VM Count="23">
-      <VMName>PDC-DB-SCSMDW1</VMName>
-      <NetworkAdapter>
-        <VLANID>180</VLANID>
-        <IP>
-          <Address>172.21.80.43</Address>
-        </IP>
-      </NetworkAdapter>
-      <DataDisks>
-        <Count>1</Count>
-        <Format>VHDX</Format>
-        <Size>150</Size>
-      </DataDisks>
-    </VM>
-    <VM Count="24">
-      <VMName>PDC-DB-SCSMAS1</VMName>
-      <NetworkAdapter>
-        <VLANID>180</VLANID>
-        <IP>
-          <Address>172.21.80.44</Address>
-        </IP>
-      </NetworkAdapter>
-      <DataDisks>
-        <Count>1</Count>
-        <Format>VHDX</Format>
-        <Size>150</Size>
-      </DataDisks>
-    </VM>
-
-	<VM Count="25">
+    
+	<VM Count="18">
       <VMName>WAP-DB-SQL01</VMName>
       <NetworkAdapter>
         <VLANID>180</VLANID>
@@ -695,7 +597,7 @@
         <Size>25</Size>
       </DataDisks>
     </VM>
-    <VM Count="26">
+    <VM Count="19">
       <VMName>WAP-WS-PRIVATE1</VMName>
       <NetworkAdapter>
         <VLANID>180</VLANID>
@@ -704,7 +606,7 @@
         </IP>
       </NetworkAdapter>
     </VM>
-    <VM Count="27">
+    <VM Count="20">
       <VMName>WAP-WS-PUBLIC1</VMName>
       <NetworkAdapter>
         <VLANID>180</VLANID>
@@ -714,7 +616,7 @@
       </NetworkAdapter>
     </VM>
 	
-    <VM Count="28">
+    <VM Count="21">
       <VMName>WEB-FS-SMB1</VMName>
       <NetworkAdapter>
         <VLANID>180</VLANID>
@@ -723,7 +625,7 @@
         </IP>
       </NetworkAdapter>
     </VM>
-    <VM Count="29">
+    <VM Count="22">
       <VMName>WEB-DB-SQL1</VMName>
       <NetworkAdapter>
         <VLANID>180</VLANID>
@@ -737,7 +639,7 @@
         <Size>25</Size>
       </DataDisks>
     </VM>
-    <VM Count="30">
+    <VM Count="23">
       <VMName>WEB-WS-CONTROL1</VMName>
       <NetworkAdapter>
         <VLANID>180</VLANID>
@@ -746,7 +648,7 @@
         </IP>
       </NetworkAdapter>
     </VM>
-    <VM Count="31">
+    <VM Count="24">
       <VMName>WEB-WS-MANAGE1</VMName>
       <NetworkAdapter>
         <VLANID>180</VLANID>
@@ -755,7 +657,7 @@
         </IP>
       </NetworkAdapter>
     </VM>
-    <VM Count="32">
+    <VM Count="25">
       <VMName>WEB-WS-PUBLISH1</VMName>
       <NetworkAdapter>
         <VLANID>180</VLANID>
@@ -764,7 +666,7 @@
         </IP>
       </NetworkAdapter>
     </VM>
-    <VM Count="33">
+    <VM Count="26">
       <VMName>WEB-WS-FRONT1</VMName>
       <NetworkAdapter>
         <VLANID>180</VLANID>
@@ -773,7 +675,7 @@
         </IP>
       </NetworkAdapter>
     </VM>
-    <VM Count="34">
+    <VM Count="27">
       <VMName>WEB-WS-WORKSTD1</VMName>
 	  <NetworkAdapter>
         <VLANID>180</VLANID>
@@ -782,7 +684,7 @@
         </IP>
       </NetworkAdapter>
     </VM>
-    <VM Count="35">
+    <VM Count="28">
       <VMName>WEB-WS-WORKSTD2</VMName>
 	  <NetworkAdapter>
         <VLANID>180</VLANID>
@@ -791,7 +693,7 @@
         </IP>
       </NetworkAdapter>
     </VM>
-    <VM Count="36">
+    <VM Count="29">
       <VMName>WEB-WS-WORKRS1</VMName>
 	  <NetworkAdapter>
         <VLANID>180</VLANID>
@@ -800,7 +702,7 @@
         </IP>
       </NetworkAdapter>
     </VM>
-    <VM Count="37">
+    <VM Count="30">
       <VMName>WEB-WS-WORKRS2</VMName>
 	  <NetworkAdapter>
         <VLANID>180</VLANID>
