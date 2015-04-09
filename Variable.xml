@@ -1,34 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!--System Center 2012R2 und Windows Azure Pack complete-->
+<!--Windows Azure Pack-->
 <Installer version="2.0">
   <Variable Name="DebugPS" Value="True" />
-  <!--<Variable Name="SQLServer2012ProductKey" Value="" />-->
   <Components>
     <Component Name="Windows Azure Pack 2013">
-      <Variable Name="WindowsAzurePack2013ServerAdminGroup" Value="WAP\WAP Administrators" />
-      <Variable Name="WindowsAzurePack2013AdminGroup" Value="WAP\WAP-WS-PRIVATE1s" />
+      <Variable Name="WindowsAzurePack2013ServerAdminGroup" Value="AzurePack\Admins WAP" />
+      <Variable Name="WindowsAzurePack2013AdminGroup" Value="AzurePack\WAP-WS-PRIVATE1" />
       <Variable Name="WindowsAzurePack2013ConfigStorePassphrase" Value="!Reset123" />
     </Component>
   </Components>
   <Roles>
-    <Role Name="SQL Server 2012 Management Tools" Server="WAP-DB-SQL01.WindowsAzurePack.local" />
-    <Role Name="SQL Server 2012 Database Server" Server="WAP-DB-SQL01.WindowsAzurePack.local" Instance="MSSQLSERVER" />
-    <Role Name="Windows Azure Pack 2013 Database Server" Server="WAP-DB-SQL01.WindowsAzurePack.local" Instance="MSSQLSERVER" />
-    <Role Name="Windows Azure Pack 2013 Admin API Server" Server="WAP-WS-PRIVATE1.WindowsAzurePack.local" />
-    <Role Name="Windows Azure Pack 2013 Tenant API Server" Server="WAP-WS-PUBLIC1.WindowsAzurePack.local" />
-    <Role Name="Windows Azure Pack 2013 Tenant Public API Server" Server="WAP-WS-PUBLIC1.WindowsAzurePack.local" />
-    <Role Name="Windows Azure Pack 2013 Admin Site Server" Server="WAP-WS-PRIVATE1.WindowsAzurePack.local" />
-    <Role Name="Windows Azure Pack 2013 Admin Authentication Site Server" Server="WAP-WS-PRIVATE1.WindowsAzurePack.local" />
-    <Role Name="Windows Azure Pack 2013 Tenant Authentication Site Server" Server="WAP-WS-PUBLIC1.WindowsAzurePack.local" />
-    <Role Name="Windows Azure Pack 2013 Tenant Site Server" Server="WAP-WS-PUBLIC1.WindowsAzurePack.local" />
-    <Role Name="Windows Azure Pack 2013 Console" Server="WAP-WS-PRIVATE1.WindowsAzurePack.local" />
+    <Role Name="SQL Server 2012 Management Tools" Server="WAP-DB-SQL01.AzurePack.local" />
+    <Role Name="SQL Server 2012 Database Server" Server="WAP-DB-SQL01.AzurePack.local" Instance="MSSQLSERVER" />
+    <Role Name="Windows Azure Pack 2013 Database Server" Server="WAP-DB-SQL01.AzurePack.local" Instance="MSSQLSERVER" />
+    <Role Name="Windows Azure Pack 2013 Admin API Server" Server="WAP-WS-PRIVATE1.AzurePack.local" />
+    <Role Name="Windows Azure Pack 2013 Tenant API Server" Server="WAP-WS-PUBLIC1.AzurePack.local" />
+    <Role Name="Windows Azure Pack 2013 Tenant Public API Server" Server="WAP-WS-PUBLIC1.AzurePack.local" />
+    <Role Name="Windows Azure Pack 2013 Admin Site Server" Server="WAP-WS-PRIVATE1.AzurePack.local" />
+    <Role Name="Windows Azure Pack 2013 Admin Authentication Site Server" Server="WAP-WS-PRIVATE1.AzurePack.local" />
+    <Role Name="Windows Azure Pack 2013 Tenant Authentication Site Server" Server="WAP-WS-PUBLIC1.AzurePack.local" />
+    <Role Name="Windows Azure Pack 2013 Tenant Site Server" Server="WAP-WS-PUBLIC1.AzurePack.local" />
+    <Role Name="Windows Azure Pack 2013 Console" Server="WAP-WS-PRIVATE1.AzurePack.local" />
   </Roles>
   <SQL>
-    <Instance Server="WAP-DB-SQL01.WindowsAzurePack.local" Instance="MSSQLSERVER" Version="SQL Server 2012">
-      <Variable Name="SQLAdmins" Value="WAP\SQLAdmins" />
-      <Variable Name="SQLAgtServiceAccount" Value="WAP\svcsql" />
+    <Instance Server="WAP-DB-SQL01.AzurePack.local" Instance="MSSQLSERVER" Version="SQL Server 2012">
+      <Variable Name="SQLAdmins" Value="AzurePack\Admins SQL WAP-DB-SQL01 MSSQLSERVER" />
+      <Variable Name="SQLAgtServiceAccount" Value="AzurePack\!svcSQLDBWAP" />
       <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
-      <Variable Name="SQLServiceAccount" Value="WAP\svcsql" />
+      <Variable Name="SQLServiceAccount" Value="AzurePack\!svcSQLDBWAP" />
       <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
       <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
       <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
@@ -41,8 +40,8 @@
     <Count>6</Count>
     <Default>
       <Host>Localhost</Host>
-      <VMFolder>V:\Resources\Pool 1\Resources\WindowsAzurePack.local</VMFolder>
-      <VHDFolder>V:\Resources\Pool 1\Resources\WindowsAzurePack.local</VHDFolder>
+      <VMFolder>V:\Resources\Pool 1\Resources\AzurePack.local</VMFolder>
+      <VHDFolder>V:\Resources\Pool 1\Resources\AzurePack.local</VHDFolder>
       <VMGeneration>2</VMGeneration>
       <GuestServices>True</GuestServices>
       <VMName>
@@ -60,10 +59,10 @@
         <VirtualSwitch>CorpNet01</VirtualSwitch>
         <IP>
           <Prefix>172.21.80.</Prefix>
-          <Sequence>111</Sequence>
+          <Sequence>221</Sequence>
           <Mask>24</Mask>
           <Gateway>172.21.80.1</Gateway>
-          <DNS>172.21.80.21</DNS>
+          <DNS>172.21.80.221</DNS>
         </IP>
       </NetworkAdapter>
       <OSDisk>
@@ -82,9 +81,9 @@
         <Delay>0</Delay>
       </AutoStart>
       <JoinDomain>
-        <Domain>WindowsAzurePack.local</Domain>
+        <Domain>AzurePack.local</Domain>
         <Credentials>
-          <Domain>WindowsAzurePack.local</Domain>
+          <Domain>AzurePack.local</Domain>
           <Password>!Reset123</Password>
           <Username>!installer</Username>
         </Credentials>
@@ -94,7 +93,7 @@
       <TimeZone>GMT Standard Time</TimeZone>
     </Default>
     <Domain>
-      <Name>WindowsAzurePack.local</Name>
+      <Name>AzurePack.local</Name>
       <ServiceAccountOU>Services</ServiceAccountOU>
       <GroupOU>Groups</GroupOU>
     </Domain>
@@ -103,7 +102,7 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.21</Address>
+          <Address>172.21.80.221</Address>
         </IP>
       </NetworkAdapter>
     </VM>
@@ -112,7 +111,7 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.21.22</Address>
+          <Address>172.21.80.222</Address>
         </IP>
       </NetworkAdapter>
     </VM>
@@ -121,7 +120,7 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.21.22</Address>
+          <Address>172.21.80.223</Address>
         </IP>
       </NetworkAdapter>
     </VM>
@@ -130,7 +129,7 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.23</Address>
+          <Address>172.21.80.224</Address>
         </IP>
       </NetworkAdapter>
       <DataDisks>
@@ -144,7 +143,7 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.24</Address>
+          <Address>172.21.80.225</Address>
         </IP>
       </NetworkAdapter>
     </VM>
@@ -153,14 +152,14 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.25</Address>
+          <Address>172.21.80.226</Address>
         </IP>
       </NetworkAdapter>
     </VM>
   </VMs>
   <Variable Name="SystemCenter2012ProductKey" Value="BXH69-M62YX-QQD6R-3GPWX-8WMFY" />
   <Variable Name="SQLServer2012ProductKey" Value="YFC4R-BRRWB-TVP9Y-6WJQ9-MCJQ7" />
-  <Variable Name="InstallerServiceAccount" Value="WAP\!Installer" />
+  <Variable Name="InstallerServiceAccount" Value="AzurePack\!Installer" />
   <Variable Name="InstallerServiceAccountPassword" Value="!Reset123" />
   <Variable Name="SourcePath" Value="$SystemDrive\Source" />
   <Variable Name="TempPath" Value="$SystemDrive\Temp" />
