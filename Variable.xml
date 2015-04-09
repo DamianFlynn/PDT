@@ -163,7 +163,7 @@
 	<!-- Web Farm -->
 	<Role Name="SQL Server 2012 Management Tools" Server="WEB-DB-SQL1.CloudOS2012R2.local" />
     <Role Name="SQL Server 2012 Database Server" Server="WEB-DB-SQL1.CloudOS2012R2.local" Instance="MSSQLSERVER" />
-    <Role Name="Windows Azure Pack 2013 Web Sites Database Server" Server="WEB-DB-SQL1.CloudOS2012R2.local" Instance="" />
+    <Role Name="Windows Azure Pack 2013 Web Sites Database Server" Server="WEB-DB-SQL1.CloudOS2012R2.local" Instance="MSSQLSERVER" />
     <Role Name="Windows Azure Pack 2013 Web Sites File Server" Server="WEB-FS-SMB1.CloudOS2012R2.local" />
     <Role Name="Windows Azure Pack 2013 Web Sites Controller Server" Server="WEB-WS-CONTROL1.CloudOS2012R2.local" />
     <Role Name="Windows Azure Pack 2013 Web Sites Management Server" Server="WEB-WS-MANAGE1.CloudOS2012R2.local" />
