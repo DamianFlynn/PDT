@@ -1,512 +1,827 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!--System Center 2012R2 deployment-->
+<!--System Center 2012 R2-->
 <Installer version="2.0">
   <Variable Name="DebugPS" Value="True" />
   <Components>
     <Component Name="System Center 2012 R2 Virtual Machine Manager">
-      <Variable Name="SystemCenter2012R2VirtualMachineManagerProgramFiles" Value="D:\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager" />
-      <Variable Name="SystemCenter2012R2VirtualMachineManagerAdminGroup" Value="DEMOSC\VMMAdmins" />
+      <Variable Name="SystemCenter2012R2VirtualMachineManagerProgramFiles" Value="C:\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager" />
+      <Variable Name="SystemCenter2012R2VirtualMachineManagerAdminGroup" Value="CloudOS2012R2\SC VMM Admins" />
       <Variable Name="SystemCenter2012R2VirtualMachineManagerBitsTcpPort" Value="444" />
-      <Variable Name="SystemCenter2012R2VirtualMachineManagerServiceAccount" Value="DEMOSC\svcvm" />
-      <Variable Name="SystemCenter2012R2VirtualMachineManagerServiceAccountPassword" Value="Password01" />
+      <Variable Name="SystemCenter2012R2VirtualMachineManagerServiceAccount" Value="CloudOS2012R2\!svcSCVMM" />
+      <Variable Name="SystemCenter2012R2VirtualMachineManagerServiceAccountPassword" Value="!Reset123" />
     </Component>
-    <Component Name="System Center 2012 R2 App Controller">
-      <Variable Name="SystemCenter2012R2AppControllerInstallPath" Value="D:\Program Files\Microsoft System Center 2012 R2\App Controller" />
-      <Variable Name="SystemCenter2012R2AppControllerAdminGroup" Value="DEMOSC\ACAdmins" />
-      <Variable Name="SystemCenter2012R2AppControllerServiceAccount" Value="DEMOSC\svcac" />
-      <Variable Name="SystemCenter2012R2AppControllerServiceAccountPassword" Value="Password01" />
-    </Component>
-    <Component Name="System Center 2012 R2 Orchestrator">
-      <Variable Name="SystemCenter2012R2OrchestratorInstallDir" Value="D:\Program Files (x86)\Microsoft System Center 2012 R2\Orchestrator" />
-      <Variable Name="SystemCenter2012R2OrchestratorAdminGroup" Value="DEMOSC\ORAdmins" />
-      <Variable Name="SystemCenter2012R2OrchestratorServiceAccount" Value="DEMOSC\svcor" />
-      <Variable Name="SystemCenter2012R2OrchestratorServiceAccountPassword" Value="Password01" />
+     <Component Name="System Center 2012 R2 Orchestrator">
+      <Variable Name="SystemCenter2012R2OrchestratorInstallDir" Value="C:\Program Files (x86)\Microsoft System Center 2012 R2\Orchestrator" />
+      <Variable Name="SystemCenter2012R2OrchestratorAdminGroup" Value="CloudOS2012R2\SC Orchestrator Admins" />
+      <Variable Name="SystemCenter2012R2OrchestratorServiceAccount" Value="CloudOS2012R2\!svcSCOrch" />
+      <Variable Name="SystemCenter2012R2OrchestratorServiceAccountPassword" Value="!Reset123" />
     </Component>
     <Component Name="System Center 2012 R2 Service Provider Foundation">
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCVMMServiceAccount" Value="DEMOSC\svcspf" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCVMMServiceAccountPassword" Value="Password01" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationVMMSecurityGroupUsers" Value="DEMOSC\SPFAdmins" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCAdminServiceAccount" Value="DEMOSC\svcspf" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCAdminServiceAccountPassword" Value="Password01" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationAdminSecurityGroupUsers" Value="DEMOSC\SPFAdmins" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCProviderServiceAccount" Value="DEMOSC\svcspf" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCProviderServiceAccountPassword" Value="Password01" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationProviderSecurityGroupUsers" Value="DEMOSC\SPFAdmins" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCUsageServiceAccount" Value="DEMOSC\svcspf" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCUsageServiceAccountPassword" Value="Password01" />
-      <Variable Name="SystemCenter2012R2ServiceProviderFoundationUsageSecurityGroupUsers" Value="DEMOSC\SPFAdmins" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCVMMServiceAccount" Value="CloudOS2012R2\!svcSCSPF_vmm" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCVMMServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationVMMSecurityGroupUsers" Value="CloudOS2012R2\SC SPF Admins" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCAdminServiceAccount" Value="CloudOS2012R2\!svcSCSPF_admin" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCAdminServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationAdminSecurityGroupUsers" Value="CloudOS2012R2\SC SPF Admins" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCProviderServiceAccount" Value="CloudOS2012R2\!svcSCSPF_prov" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationSCProviderServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationProviderSecurityGroupUsers" Value="CloudOS2012R2\SC SPF Admins" />
+      <Variable Name="SystemCenter2012R2ServiceProviderFoundationUsageSecurityGroupUsers" Value="CloudOS2012R2\Domain Users" />
     </Component>
     <Component Name="System Center 2012 R2 Service Management Automation">
-      <Variable Name="SystemCenter2012R2ServiceManagementAutomationInstallFolder" Value="D:\Program Files\Microsoft System Center 2012 R2\Service Management Automation" />
-      <Variable Name="SystemCenter2012R2ServiceManagementAutomationServiceAccount" Value="DEMOSC\svcsma" />
-      <Variable Name="SystemCenter2012R2ServiceManagementAutomationServiceAccountPassword" Value="Password01" />
-      <Variable Name="SystemCenter2012R2ServiceManagementAutomationAdminGroup" Value="DEMOSC\SMAAdmins" />
-    </Component>
-    <Component Name="System Center 2012 R2 Service Reporting">
-      <Variable Name="SystemCenter2012R2ServiceReportingInstallFolder" Value="D:\Program Files\Microsoft System Center 2012 R2\Service Reporting" />
+      <Variable Name="SystemCenter2012R2ServiceManagementAutomationAdminGroup" Value="CloudOS2012R2\SC SMA Admins" />
+      <Variable Name="SystemCenter2012R2ServiceManagementAutomationInstallFolder" Value="C:\Program Files\Microsoft System Center 2012 R2\Service Management Automation" />
+      <Variable Name="SystemCenter2012R2ServiceManagementAutomationServiceAccount" Value="CloudOS2012R2\!svcSCSMA" />
+      <Variable Name="SystemCenter2012R2ServiceManagementAutomationServiceAccountPassword" Value="!Reset123" />
     </Component>
     <Component Name="System Center 2012 R2 Operations Manager">
-      <Variable Name="SystemCenter2012R2OperationsManagerInstallPath" Value="D:\Program Files\Microsoft System Center 2012 R2\Operations Manager" />
-      <Variable Name="SystemCenter2012R2OperationsManagerAdminGroup" Value="DEMOSC\OMAdmins" />
-      <Variable Name="SystemCenter2012R2OperationsManagerManagementGroupName" Value="OM_DEMOSC" />
-      <Variable Name="SystemCenter2012R2OperationsManagerActionServiceAccount" Value="DEMOSC\svcom_saa" />
-      <Variable Name="SystemCenter2012R2OperationsManagerActionServiceAccountPassword" Value="Password01" />
-      <Variable Name="SystemCenter2012R2OperationsManagerDASServiceAccount" Value="DEMOSC\svcom_das" />
-      <Variable Name="SystemCenter2012R2OperationsManagerDASServiceAccountPassword" Value="Password01" />
-      <Variable Name="SystemCenter2012R2OperationsManagerDataReaderServiceAccount" Value="DEMOSC\svcom_dra" />
-      <Variable Name="SystemCenter2012R2OperationsManagerDataReaderServiceAccountPassword" Value="Password01" />
-      <Variable Name="SystemCenter2012R2OperationsManagerDataWriterServiceAccount" Value="DEMOSC\svcom_dwa" />
-      <Variable Name="SystemCenter2012R2OperationsManagerDataWriterServiceAccountPassword" Value="Password01" />
+      <Variable Name="SystemCenter2012R2OperationsManagerInstallPath" Value="C:\Program Files\Microsoft System Center 2012 R2\Operations Manager" />
+      <Variable Name="SystemCenter2012R2OperationsManagerAdminGroup" Value="CloudOS2012R2\SC OM Admins"/>
+      <Variable Name="SystemCenter2012R2OperationsManagerManagementGroupName" Value="OM_DigiNerve"/>
+      <Variable Name="SystemCenter2012R2OperationsManagerActionServiceAccount" Value="CloudOS2012R2\!svcSCOM_saa"/>
+      <Variable Name="SystemCenter2012R2OperationsManagerActionServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SystemCenter2012R2OperationsManagerDASServiceAccount" Value="CloudOS2012R2\!svcSCOM_das"/>
+      <Variable Name="SystemCenter2012R2OperationsManagerDASServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SystemCenter2012R2OperationsManagerDataReaderServiceAccount" Value="CloudOS2012R2\!svcSCOM_dra"/>
+      <Variable Name="SystemCenter2012R2OperationsManagerDataReaderServiceAccountPassword" Value="!Reset123"/>
+      <Variable Name="SystemCenter2012R2OperationsManagerDataWriterServiceAccount" Value="CloudOS2012R2\!svcSCOM_dwa"/>
+      <Variable Name="SystemCenter2012R2OperationsManagerDataWriterServiceAccountPassword" Value="!Reset123"/>
     </Component>
-    <Component Name="System Center 2012 R2 Configuration Manager">
-      <Variable Name="SystemCenter2012R2ConfigurationManagerInstallDir" Value="D:\Program Files\Microsoft System Center 2012 R2\Configuration Manager" />
-      <Variable Name="SystemCenter2012R2ConfigurationManagerAdminGroup" Value="DEMOSC\CMAdmins" />
-      <Variable Name="SystemCenter2012R2ConfigurationManagerDatabase" Value="CM_HQ1" />
-      <Variable Name="SystemCenter2012R2ConfigurationManagerSiteCode" Value="HQ1" />
-      <Variable Name="SystemCenter2012R2ConfigurationManagerSite" Value="DEMOSC" />
+	<Component Name="System Center 2012 R2 Service Manager">
+      <Variable Name="SystemCenter2012R2ServiceManagerInstallPath" Value="C:\Program Files\Microsoft System Center 2012 R2\Service Manager" />
+      <Variable Name="SystemCenter2012R2ServiceManagerAdminRoleGroup" Value="CloudOS2012R2\SC SM Admins"/>
+	  <Variable Name="SystemCenter2012R2ServiceManagerDatawarehouseManagementGroupName" Value="SMDW_DigiNerve"/>
+      <Variable Name="SystemCenter2012R2ServiceManagerManagementGroupName" Value="SM_DigiNerve"/>
+      <Variable Name="SystemCenter2012R2ServiceManagerServicesServiceAccount" Value="CloudOS2012R2\!svcSCSM_serv" />
+      <Variable Name="SystemCenter2012R2ServiceManagerServicesServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SystemCenter2012R2ServiceManagerWorkflowServiceAccount" Value="CloudOS2012R2\!svcSCSM_wflow" />
+      <Variable Name="SystemCenter2012R2ServiceManagerWorkflowServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SystemCenter2012R2ServiceManagerReportingServiceAccount" Value="CloudOS2012R2\!svcSCSM_report" />
+      <Variable Name="SystemCenter2012R2ServiceManagerReportingServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SystemCenter2012R2ServiceManagerAnalysisServiceAccount" Value="CloudOS2012R2\!svcSCSM_analis" />
+      <Variable Name="SystemCenter2012R2ServiceManagerAnalysisServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SystemCenter2012R2ServiceManagerPortalServiceAccount" Value="CloudOS2012R2\!svcSCSM_portal" />
+      <Variable Name="SystemCenter2012R2ServiceManagerPortalServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SystemCenter2012R2ServiceManagerPortalUsers" Value="CloudOS2012R2\Domain Users"/>
     </Component>
-    <Component Name="System Center 2012 R2 Service Manager">
-      <Variable Name="SystemCenter2012R2ServiceManagerInstallPath" Value="D:\Program Files\Microsoft System Center 2012 R2\Service Manager" />
-      <Variable Name="SystemCenter2012R2ServiceManagerAdminRoleGroup" Value="DEMOSC\SMAdmins" />
-      <Variable Name="SystemCenter2012R2ServiceManagerServicesServiceAccount" Value="DEMOSC\svcsm_s" />
-      <Variable Name="SystemCenter2012R2ServiceManagerServicesServiceAccountPassword" Value="Password01" />
-      <Variable Name="SystemCenter2012R2ServiceManagerWorkflowServiceAccount" Value="DEMOSC\svcsm_w" />
-      <Variable Name="SystemCenter2012R2ServiceManagerWorkflowServiceAccountPassword" Value="Password01" />
-      <Variable Name="SystemCenter2012R2ServiceManagerReportingServiceAccount" Value="DEMOSC\svcsm_r" />
-      <Variable Name="SystemCenter2012R2ServiceManagerReportingServiceAccountPassword" Value="Password01" />
-      <Variable Name="SystemCenter2012R2ServiceManagerAnalysisServiceAccount" Value="DEMOSC\svcsm_a" />
-      <Variable Name="SystemCenter2012R2ServiceManagerAnalysisServiceAccountPassword" Value="Password01" />
-      <Variable Name="SystemCenter2012R2ServiceManagerPortalServiceAccount" Value="DEMOSC\svcsm_p" />
-      <Variable Name="SystemCenter2012R2ServiceManagerPortalServiceAccountPassword" Value="Password01" />
-      <Variable Name="SystemCenter2012R2ServiceManagerManagementGroupName" Value="SM_DEMOSC" />
-      <Variable Name="SystemCenter2012R2ServiceManagerDatawarehouseManagementGroupName" Value="DW_DEMOSC" />
-      <Variable Name="SystemCenter2012R2ServiceManagerPortalWebSiteCertificate" Value="False" />
-      <Variable Name="SystemCenter2012R2ServiceManagerSpPortalWebSiteCertificate" Value="False" />
-      <Variable Name="SystemCenter2012R2ServiceManagerPortalUsers" Value="DEMOSC\Domain Users" />
+	<Component Name="System Center 2012 R2 Data Protection Manager">
+      <Variable Name="SystemCenter2012R2DataProtectionManagerProgramFiles" Value="C:\Program Files" />
+      <Variable Name="SystemCenter2012R2DataProtectionManagerAdminGroup" Value="CloudOS2012R2\SC DPM Admins"/>
     </Component>
-    <Component Name="System Center 2012 R2 Data Protection Manager">
-      <Variable Name="SystemCenter2012R2DataProtectionManagerAdminGroup" Value="DEMOSC\DPMAdmins" />
+	<Component Name="Windows Azure Pack 2013">
+      <Variable Name="WindowsAzurePack2013ServerAdminGroup" Value="CloudOS2012R2\WAP Administrators" />
+      <Variable Name="WindowsAzurePack2013AdminGroup" Value="CloudOS2012R2\WAP-WS-PRIVATE1s" />
+      <Variable Name="WindowsAzurePack2013ConfigStorePassphrase" Value="!Reset123" />
     </Component>
-    <Component Name="Windows Azure Pack 2013">
-      <Variable Name="WindowsAzurePack2013AdminGroup" Value="DEMOSC\WAPAdmins" />
-      <Variable Name="WindowsAzurePack2013ConfigStorePassphrase" Value="Password01!" />
+	<Component Name="Windows Azure Pack 2013 Web Sites">
+      <Variable Name="WindowsAzurePack2013WebSitesServerAdminGroup" Value="CloudOS2012R2\Admins Web Sites Servers" />
+      <Variable Name="WindowsAzurePack2013WebSitesCloudAdmin" Value="CloudOS2012R2\WebCloudAdmin" />
+      <Variable Name="WindowsAzurePack2013WebSitesCloudAdminPassword" Value="!Reset123" />
+      <Variable Name="WindowsAzurePack2013WebSitesDNSSuffix" Value="web.CloudOS2012R2.local" />
+      <Variable Name="WindowsAzurePack2013WebSitesFileServerAdminServiceAccount" Value="CloudOS2012R2\!svcFSAdmin" />
+      <Variable Name="WindowsAzurePack2013WebSitesFileServerAdminServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="WindowsAzurePack2013WebSitesFileShareOwnerServiceAccount" Value="CloudOS2012R2\!svcFSFileOwner" />
+      <Variable Name="WindowsAzurePack2013WebSitesFileShareOwnerServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="WindowsAzurePack2013WebSitesFileShareUserServiceAccount" Value="CloudOS2012R2\!svcFSFileUser" />
+      <Variable Name="WindowsAzurePack2013WebSitesFileShareUserServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="WindowsAzurePack2013WebSitesCertificateShareUserServiceAccount" Value="CloudOS2012R2\!svcFSCertUser" />
+      <Variable Name="WindowsAzurePack2013WebSitesCertificateShareUserServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="WindowsAzurePack2013WebSitesManagementServerAdminServiceAccount" Value="CloudOS2012R2\!svcWSManager" />
+      <Variable Name="WindowsAzurePack2013WebSitesManagementServerAdminServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="WindowsAzurePack2013WebSitesPublisherAdminServiceAccount" Value="CloudOS2012R2\!svcWSPublisher" />
+      <Variable Name="WindowsAzurePack2013WebSitesPublisherAdminServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="WindowsAzurePack2013WebSitesFrontEndAdminServiceAccount" Value="CloudOS2012R2\!svcWSFrontEnd" />
+      <Variable Name="WindowsAzurePack2013WebSitesFrontEndAdminServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="WindowsAzurePack2013WebSitesWorkerAdminServiceAccount" Value="CloudOS2012R2\!svcWSWorker" />
+      <Variable Name="WindowsAzurePack2013WebSitesWorkerAdminServiceAccountPassword" Value="!Reset123" />
+    </Component>
+    <Component Name="SQL Server 2012">
     </Component>
   </Components>
   <Roles>
-    <Role Name="System Center 2012 R2 Virtual Machine Manager Database Server" Server="DB01.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Virtual Machine Manager Management Server" Server="VMM01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Virtual Machine Manager Console" Server="RD01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 App Controller Database Server" Server="DB01.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 App Controller Server" Server="VMM01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 App Controller Console" Server="RD01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Operations Manager Database Server" Server="DB02.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Operations Manager Datawarehouse Server" Server="DB02.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Operations Manager Reporting Server" Server="DB02.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Operations Manager Management Server" Server="OM01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Operations Manager Web Console Server" Server="OM01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Operations Manager Console" Server="RD01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Configuration Manager Database Server" Server="CM01.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Configuration Manager Provider Server" Server="CM01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Configuration Manager Site Server" Server="CM01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Configuration Manager Console" Server="RD01.demosc.local">
-    </Role>
-    <Role Name="SQL Server 2012 Management Tools" Server="RD01.demosc.local">
-    </Role>
-    <Role Name="SQL Server 2012 Reporting Server" Server="CM01.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="SQL Server 2012 Database Server" Server="DB01.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Manager Management Server" Server="SM01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Manager Web Content Server" Server="SM01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Manager Datawarehouse Management Server" Server="SM02.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Manager SharePoint Web Parts Server" Server="SM03.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Manager Database Server" Server="SM01.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Manager Datawarehouse Server" Server="DB03.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Manager Analysis Server" Server="DB03.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Manager Reporting Server" Server="DB03.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Manager Console" Server="RD01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Data Protection Manager Server" Server="DPM01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Data Protection Manager Database Server" Server="DPM01.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Data Protection Manager Reporting Server" Server="DPM01.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Data Protection Manager Console" Server="RD01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Orchestrator Database Server" Server="DB01.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Orchestrator Management Server" Server="OR01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Orchestrator Primary Runbook Server" Server="OR01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Orchestrator Web Components Server" Server="OR01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Orchestrator Runbook Designer" Server="RD01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Provider Foundation Server" Server="OR01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Provider Foundation Database Server" Server="DB01.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Management Automation Web Service Server" Server="OR01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Management Automation Runbook Worker Server" Server="OR01.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Management Automation Database Server" Server="DB01.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Reporting Server" Server="DB03.demosc.local">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Reporting Datawarehouse Server" Server="DB03.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="System Center 2012 R2 Service Reporting Analysis Server" Server="DB03.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="Windows Azure Pack 2013 Database Server" Server="WAP01.demosc.local" Instance="MSSQLSERVER">
-    </Role>
-    <Role Name="Windows Azure Pack 2013 Admin API Server" Server="WAP01.demosc.local">
-    </Role>
-    <Role Name="Windows Azure Pack 2013 Tenant API Server" Server="WAP01.demosc.local">
-    </Role>
-    <Role Name="Windows Azure Pack 2013 Tenant Public API Server" Server="WAP01.demosc.local">
-    </Role>
-    <Role Name="Windows Azure Pack 2013 Admin Site Server" Server="WAP01.demosc.local">
-    </Role>
-    <Role Name="Windows Azure Pack 2013 Admin Authentication Site Server" Server="WAP01.demosc.local">
-    </Role>
-    <Role Name="Windows Azure Pack 2013 Tenant Authentication Site Server" Server="WAP01.demosc.local">
-    </Role>
-    <Role Name="Windows Azure Pack 2013 Tenant Site Server" Server="WAP01.demosc.local">
-    </Role>
-    <Role Name="Windows Azure Pack 2013 Console" Server="RD01.demosc.local">
-    </Role>
+  
+	
+	<!-- SCOM 2012 R2 -->
+	  
+    <Role Name="System Center 2012 R2 Operations Manager Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCOMDB" />
+    <Role Name="System Center 2012 R2 Operations Manager Datawarehouse Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCOMDW" />
+    <Role Name="System Center 2012 R2 Operations Manager Management Server" Server="PDC-SC-OM1.CloudOS2012R2.local" />
+    <Role Name="System Center 2012 R2 Operations Manager Reporting Server" Server="PDC-SC-OMRPT1.CloudOS2012R2.local" Instance="SCOMASRS" />
+    <Role Name="System Center 2012 R2 Operations Manager Web Console Server" Server="PDC-SC-OM1.CloudOS2012R2.local" />
+    <Role Name="System Center 2012 R2 Operations Manager Console" Server="PDC-SC-OM1.CloudOS2012R2.local" />
+    <Role Name="SQL Server 2012 Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCOMDB" />
+	<Role Name="SQL Server 2012 Fulltext" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCOMDB" />
+	<Role Name="SQL Server 2012 Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCOMDW" />
+	<Role Name="SQL Server 2012 Fulltext" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCOMDW" />
+    <Role Name="SQL Server 2012 Reporting Server" Server="PDC-SC-OMRPT1.CloudOS2012R2.local" Instance="SCOMASRS" />
+    <Role Name="SQL Server 2012 Analysis Server" Server="PDC-SC-OMRPT1.CloudOS2012R2.local" Instance="SCOMASRS" />
+  
+	<!-- SCVMM 2012 R2 -->
+	
+	<Role Name="SQL Server 2012 Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCVMMDB" />
+	<Role Name="System Center 2012 R2 Virtual Machine Manager Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCVMMDB" />
+    <Role Name="System Center 2012 R2 Virtual Machine Manager Management Server" Server="PDC-SC-VMM1.CloudOS2012R2.local" />
+    <Role Name="System Center 2012 R2 Virtual Machine Manager Library Server" Server="PDC-FS-SMB1.CloudOS2012R2.local" />
+    <Role Name="System Center 2012 R2 Virtual Machine Manager PXE Server" Server="PDC-FS-SMB1.CloudOS2012R2.local" />
+    <Role Name="System Center 2012 R2 Virtual Machine Manager Update Server" Server="PDC-FS-SMB1.CloudOS2012R2.local" />
+    <Role Name="System Center 2012 R2 Virtual Machine Manager Console" Server="PDC-SC-VMM1.CloudOS2012R2.local" />
+	
+	<!-- SCO 2012 R2 -->
+	
+	<Role Name="SQL Server 2012 Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCDB" />
+    <Role Name="SQL Server 2012 Fulltext" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCDB" />
+    <Role Name="System Center 2012 R2 Orchestrator Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCDB" />
+    <Role Name="System Center 2012 R2 Orchestrator Management Server" Server="PDC-SC-O1.CloudOS2012R2.local" />
+    <Role Name="System Center 2012 R2 Orchestrator Primary Runbook Server" Server="PDC-SC-O1.CloudOS2012R2.local" />
+    <Role Name="System Center 2012 R2 Orchestrator Web Components Server" Server="PDC-SC-O1.CloudOS2012R2.local" />
+    <Role Name="System Center 2012 R2 Orchestrator Runbook Designer" Server="PDC-SC-O1.CloudOS2012R2.local" />
+
+	<!-- SMA 2012 R2 -->
+	
+	<Role Name="System Center 2012 R2 Service Management Automation Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCDB" />
+    <Role Name="System Center 2012 R2 Service Management Automation Web Service Server" Server="PDC-SC-SMA1.CloudOS2012R2.local" />
+    <Role Name="System Center 2012 R2 Service Management Automation Runbook Worker Server" Server="PDC-SC-SMA1.CloudOS2012R2.local" />
+
+	<!-- SPF 2012 R2 -->
+	
+	<Role Name="System Center 2012 R2 Service Provider Foundation Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCDB" />
+    <Role Name="System Center 2012 R2 Service Provider Foundation Server" Server="PDC-SC-SPF1.CloudOS2012R2.local" />
+	
+	<!-- WAP 2013 -->
+	<Role Name="SQL Server 2012 Management Tools" Server="WAP-DB-SQL01.CloudOS2012R2.local" />
+    <Role Name="SQL Server 2012 Database Server" Server="WAP-DB-SQL01.CloudOS2012R2.local" Instance="MSSQLSERVER" />
+    <Role Name="Windows Azure Pack 2013 Database Server" Server="WAP-DB-SQL01.CloudOS2012R2.local" Instance="MSSQLSERVER" />
+    <Role Name="Windows Azure Pack 2013 Admin API Server" Server="WAP-WS-PRIVATE1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Tenant API Server" Server="WAP-WS-PUBLIC1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Tenant Public API Server" Server="WAP-WS-PUBLIC1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Admin Site Server" Server="WAP-WS-PRIVATE1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Admin Authentication Site Server" Server="WAP-WS-PRIVATE1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Tenant Authentication Site Server" Server="WAP-WS-PUBLIC1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Tenant Site Server" Server="WAP-WS-PUBLIC1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Console" Server="WAP-WS-PRIVATE1.CloudOS2012R2.local" />
+	
+	<!-- Web Farm -->
+	<Role Name="SQL Server 2012 Management Tools" Server="WEB-DB-SQL1.CloudOS2012R2.local" />
+    <Role Name="SQL Server 2012 Database Server" Server="WEB-DB-SQL1.CloudOS2012R2.local" Instance="MSSQLSERVER" />
+    <Role Name="Windows Azure Pack 2013 Web Sites Database Server" Server="WEB-DB-SQL1.CloudOS2012R2.local" Instance="" />
+    <Role Name="Windows Azure Pack 2013 Web Sites File Server" Server="WEB-FS-SMB1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Web Sites Controller Server" Server="WEB-WS-CONTROL1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Web Sites Management Server" Server="WEB-WS-MANAGE1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Web Sites FrontEnd Server" Server="WEB-WS-FRONT1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Web Sites Publisher Server" Server="WEB-WS-PUBLISH1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Web Sites Shared Worker Server" Server="WEB-WS-WORKSTD1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Web Sites Shared Worker Server" Server="WEB-WS-WORKSTD2.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Web Sites Reserved Small Worker Server" Server="WEB-WS-WORKRS1.CloudOS2012R2.local" />
+    <Role Name="Windows Azure Pack 2013 Web Sites Reserved Small Worker Server" Server="WEB-WS-WORKRS2.CloudOS2012R2.local" />
+	
+	<!-- Service Reporting -->
+	<!--
+	<Role Name="SQL Server 2012 Reporting Server" Server="PDC-SC-REPORT1.CloudOS2012R2.local" Instance="SCSRDWAS" />
+    <Role Name="SQL Server 2012 Analysis Server" Server="PDC-SC-REPORT1.CloudOS2012R2.local" Instance="SCSRDWAS" />
+	<Role Name="SQL Server 2012 Database Server" Server="PDC-SC-SQL1.CloudOS2012R2.local" Instance="SCSRDWAS" />
+    <Role Name="SQL Server 2012 Integration Server" Server="PDC-SC-REPORT1.CloudOS2012R2.local" Instance="SCSRDWAS" />
+	-->
+	<Role Name="System Center 2012 R2 Service Reporting Datawarehouse Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSRDWAS" />
+    <Role Name="System Center 2012 R2 Service Reporting Analysis Server" Server="PDC-SC-REPORT1.CloudOS2012R2.local" Instance="SCSRDWAS" />
+    <Role Name="System Center 2012 R2 Service Reporting Server" Server="PDC-SC-REPORT1.CloudOS2012R2.local" />
+	
+	<!-- Service Manager -->
+	<!--
+	<Role Name="SQL Server 2012 Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSMDB" />
+    <Role Name="SQL Server 2012 Fulltext" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSMDB" />
+	<Role Name="SQL Server 2012 Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSMDW" />
+    <Role Name="SQL Server 2012 Fulltext" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSMDW" />
+    <Role Name="SQL Server 2012 Reporting Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSMDW" />
+	<Role Name="SQL Server 2012 Analysis Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSMAS" />
+	<Role Name="System Center 2012 R2 Service Manager Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSMDB" />
+	<Role Name="System Center 2012 R2 Service Manager Management Server" Server="PDC-SC-SMMS1.CloudOS2012R2.local" />
+	<Role Name="System Center 2012 R2 Service Manager Datawarehouse Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSMDW" />
+	<Role Name="System Center 2012 R2 Service Manager Analysis Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSMAS" />
+    <Role Name="System Center 2012 R2 Service Manager Reporting Server" Server="PDC-SC-SMDW1.CloudOS2012R2.local" />
+	<Role Name="System Center 2012 R2 Service Manager Datawarehouse Management Server" Server="PDC-SC-SMDW1.CloudOS2012R2.local" />
+	<Role Name="System Center 2012 R2 Service Manager Console" Server="PDC-SC-SMMS1.CloudOS2012R2.local" />
+	-->
   </Roles>
   <SQL>
-    <Instance Server="DB01.demosc.local" Instance="MSSQLSERVER" Version="SQL Server 2012">
-      <Variable Name="SQLAdmins" Value="DEMOSC\SQLAdmins" />
-      <Variable Name="SQLInstallSQLDataDir" Value="D:\Program Files\Microsoft SQL Server" />
-      <Variable Name="SQLUserDBDir" Value="D:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLUserDBLogDir" Value="E:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBDir" Value="F:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBLogDir" Value="F:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLAgtServiceAccount" Value="DEMOSC\svcsql" />
-      <Variable Name="SQLAgtServiceAccountPassword" Value="Password01" />
-      <Variable Name="SQLServiceAccount" Value="DEMOSC\svcsql" />
-      <Variable Name="SQLServiceAccountPassword" Value="Password01" />
+    
+    <Instance Server="PDC-SC-OMRPT1.CloudOS2012R2.local" Instance="SCOMASRS" Version="SQL Server 2012" >
+      <Variable Name="SQLAdmins" Value="CloudOS2012R2\Admins SQL PDC-DB-SQL01 SCOMDB" />
+      <Variable Name="SQLAgtServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCOM" />
+      <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCOM" />
+      <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
+      <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLUserDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
     </Instance>
-    <Instance Server="DB02.demosc.local" Instance="MSSQLSERVER" Version="SQL Server 2012">
-      <Variable Name="SQLAdmins" Value="DEMOSC\SQLAdmins" />
-      <Variable Name="SQLInstallSQLDataDir" Value="D:\Program Files\Microsoft SQL Server" />
-      <Variable Name="SQLUserDBDir" Value="D:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLUserDBLogDir" Value="E:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBDir" Value="F:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBLogDir" Value="F:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLASDataDir" Value="G:\Program Files\Microsoft SQL Server\MSAS11.$Instance\OLAP\Data" />
-      <Variable Name="SQLASLogDir" Value="H:\Program Files\Microsoft SQL Server\MSAS11.$Instance\OLAP\Log" />
-      <Variable Name="SQLASBackupDir" Value="G:\Program Files\Microsoft SQL Server\MSAS11.$Instance\OLAP\Backup" />
-      <Variable Name="SQLASTempDir" Value="I:\Program Files\Microsoft SQL Server\MSAS11.$Instance\OLAP\Temp" />
-      <Variable Name="SQLAgtServiceAccount" Value="DEMOSC\svcsql" />
-      <Variable Name="SQLAgtServiceAccountPassword" Value="Password01" />
-      <Variable Name="SQLServiceAccount" Value="DEMOSC\svcsql" />
-      <Variable Name="SQLServiceAccountPassword" Value="Password01" />
-      <Variable Name="SQLASServiceAccount" Value="DEMOSC\svcsql" />
-      <Variable Name="SQLASServiceAccountPassword" Value="Password01" />
+    
+	<Instance Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCOMDB" Version="SQL Server 2012" Port="10435">
+      <Variable Name="SQLAdmins" Value="CloudOS2012R2\Admins SQL PDC-DB-SQL01 SCOMDB" />
+      <Variable Name="SQLAgtServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCOM" />
+      <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCOM" />
+      <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
+      <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLUserDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
     </Instance>
-    <Instance Server="SM01.demosc.local" Instance="MSSQLSERVER" Version="SQL Server 2012">
-      <Variable Name="SQLAdmins" Value="DEMOSC\SQLAdmins" />
-      <Variable Name="SQLInstallSQLDataDir" Value="D:\Program Files\Microsoft SQL Server" />
-      <Variable Name="SQLUserDBDir" Value="D:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLUserDBLogDir" Value="E:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBDir" Value="F:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBLogDir" Value="F:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLAgtServiceAccount" Value="DEMOSC\svcsql" />
-      <Variable Name="SQLAgtServiceAccountPassword" Value="Password01" />
-      <Variable Name="SQLServiceAccount" Value="DEMOSC\svcsql" />
-      <Variable Name="SQLServiceAccountPassword" Value="Password01" />
+	
+    <Instance Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCOMDW" Version="SQL Server 2012" Port="10436">
+      <Variable Name="SQLAdmins" Value="CloudOS2012R2\Admins SQL PDC-DB-SQL01 SCOMDW" />
+      <Variable Name="SQLAgtServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCOM" />
+      <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCOM" />
+      <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
+      <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLUserDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
     </Instance>
-    <Instance Server="DB03.demosc.local" Instance="MSSQLSERVER" Version="SQL Server 2012">
-      <Variable Name="SQLAdmins" Value="DEMOSC\SQLAdmins" />
-      <Variable Name="SQLInstallSQLDataDir" Value="D:\Program Files\Microsoft SQL Server" />
-      <Variable Name="SQLUserDBDir" Value="D:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLUserDBLogDir" Value="E:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBDir" Value="F:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBLogDir" Value="F:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLASDataDir" Value="G:\Program Files\Microsoft SQL Server\MSAS11.$Instance\OLAP\Data" />
-      <Variable Name="SQLASLogDir" Value="H:\Program Files\Microsoft SQL Server\MSAS11.$Instance\OLAP\Log" />
-      <Variable Name="SQLASBackupDir" Value="G:\Program Files\Microsoft SQL Server\MSAS11.$Instance\OLAP\Backup" />
-      <Variable Name="SQLASTempDir" Value="I:\Program Files\Microsoft SQL Server\MSAS11.$Instance\OLAP\Temp" />
-      <Variable Name="SQLAgtServiceAccount" Value="DEMOSC\svcsql" />
-      <Variable Name="SQLAgtServiceAccountPassword" Value="Password01" />
-      <Variable Name="SQLServiceAccount" Value="DEMOSC\svcsql" />
-      <Variable Name="SQLServiceAccountPassword" Value="Password01" />
-      <Variable Name="SQLASServiceAccount" Value="DEMOSC\svcsql" />
-      <Variable Name="SQLASServiceAccountPassword" Value="Password01" />
+	
+	<Instance Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCDB" Version="SQL Server 2012" Port="1433">
+      <Variable Name="SQLAdmins" Value="CloudOS2012R2\Admins SQL PDC-DB-SQL01 SCDB" />
+      <Variable Name="SQLAgtServiceAccount" Value="CloudOS2012R2\!svcSQLDBSC" />
+      <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLServiceAccount" Value="CloudOS2012R2\!svcSQLDBSC" />
+      <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
+      <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLUserDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
     </Instance>
-    <Instance Server="CM01.demosc.local" Instance="MSSQLSERVER" Version="SQL Server 2012">
-      <Variable Name="SQLAdmins" Value="DEMOSC\SQLAdmins" />
-      <Variable Name="SQLInstallSQLDataDir" Value="F:\Program Files\Microsoft SQL Server" />
-      <Variable Name="SQLUserDBDir" Value="G:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLUserDBLogDir" Value="G:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBDir" Value="H:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBLogDir" Value="H:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+	
+    <Instance Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCVMMDB" Version="SQL Server 2012" Port="10434">
+      <Variable Name="SQLAdmins" Value="CloudOS2012R2\Admins SQL PDC-DB-SQL01 SCVMMDB" />
+      <Variable Name="SQLAgtServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCOM" />
+      <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCOM" />
+      <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
+      <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLUserDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
     </Instance>
-    <Instance Server="DPM01.demosc.local" Instance="MSSQLSERVER" Version="SQL Server 2012">
-      <Variable Name="SQLAdmins" Value="DEMOSC\SQLAdmins" />
-      <Variable Name="SQLInstallSQLDataDir" Value="E:\Program Files\Microsoft SQL Server" />
-      <Variable Name="SQLUserDBDir" Value="E:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLUserDBLogDir" Value="F:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBDir" Value="G:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBLogDir" Value="G:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+	
+	<Instance Server="PDC-SC-REPORT1.CloudOS2012R2.local" Instance="SCSRDWAS" Version="SQL Server 2012" >
+      <Variable Name="SQLAdmins" Value="CloudOS2012R2\Admins SQL PDC-DB-SQL01 SCOMDB" />
+      <Variable Name="SQLAgtServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCOM" />
+      <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCOM" />
+      <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
+      <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLUserDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
     </Instance>
-    <Instance Server="WAP01.demosc.local" Instance="MSSQLSERVER" Version="SQL Server 2012">
-      <Variable Name="SQLAdmins" Value="DEMOSC\SQLAdmins" />
-      <Variable Name="SQLInstallSQLDataDir" Value="E:\Program Files\Microsoft SQL Server" />
-      <Variable Name="SQLUserDBDir" Value="E:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLUserDBLogDir" Value="F:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBDir" Value="G:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
-      <Variable Name="SQLTempDBLogDir" Value="G:\Program Files\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+	
+	<Instance Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSRDWAS" Version="SQL Server 2012"  Port="10440">
+      <Variable Name="SQLAdmins" Value="CloudOS2012R2\Admins SQL PDC-DB-SQL01 SCOMDB" />
+      <Variable Name="SQLAgtServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCOM" />
+      <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCOM" />
+      <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
+      <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLUserDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
     </Instance>
+	
+    <Instance Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSMDB" Version="SQL Server 2012" Port="10437">
+      <Variable Name="SQLAdmins" Value="CloudOS2012R2\Admins SQL PDC-DB-SQL01 SCSMDB" />
+      <Variable Name="SQLAgtServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCSM" />
+      <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCSM" />
+      <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
+      <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLUserDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+    </Instance>
+	
+    <Instance Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSMDW" Version="SQL Server 2012" Port="10438">
+      <Variable Name="SQLAdmins" Value="CloudOS2012R2\Admins SQL PDC-DB-SQL01 SCSMDW" />
+      <Variable Name="SQLAgtServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCSMDW" />
+      <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCSMDW" />
+      <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
+      <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLUserDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+    </Instance>
+	
+	<Instance Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSMAS" Version="SQL Server 2012" Port="10439">
+      <Variable Name="SQLAdmins" Value="CloudOS2012R2\Admins SQL PDC-DB-SQL01 SCSMAS" />
+      <Variable Name="SQLAgtServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCSMAS" />
+      <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLServiceAccount" Value="CloudOS2012R2\!svcSQLDBSCSMAS" />
+      <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
+      <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLUserDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+    </Instance>
+    
+    <Instance Server="WAP-DB-SQL01.CloudOS2012R2.local" Instance="MSSQLSERVER" Version="SQL Server 2012">
+      <Variable Name="SQLAdmins" Value="CloudOS2012R2\SQLAdmins" />
+      <Variable Name="SQLAgtServiceAccount" Value="CloudOS2012R2\svcsql" />
+      <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLServiceAccount" Value="CloudOS2012R2\svcsql" />
+      <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
+      <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLUserDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+    </Instance>
+	
+	<Instance Server="WEB-DB-SQL1.CloudOS2012R2.local" Instance="MSSQLSERVER" Version="SQL Server 2012">
+      <Variable Name="SQLAdmins" Value="CloudOS2012R2\Admins SQL WEB-DB-SQL01 MSSQLSERVER" />
+      <Variable Name="SQLAgtServiceAccount" Value="CloudOS2012R2\!svcSQLDBWAP" />
+      <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLServiceAccount" Value="CloudOS2012R2\!svcSQLDBWAP" />
+      <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
+      <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
+      <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLUserDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+      <Variable Name="SQLTempDBLogDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
+    </Instance>
+	
   </SQL>
   <VMs>
-    <Count>15</Count>
+    <Count>37</Count>
     <Default>
       <Host>Localhost</Host>
-      <VMFolder>D:\VM</VMFolder>
-      <VHDFolder>D:\VM</VHDFolder>
-      <TimeZone>W. Europe Standard Time</TimeZone>
+      <VMFolder>V:\Resources\Pool 1\Resources\CloudOS2012R2.local</VMFolder>
+      <VHDFolder>V:\Resources\Pool 1\Resources\CloudOS2012R2.local</VHDFolder>
+      <VMGeneration>2</VMGeneration>
+      <GuestServices>True</GuestServices>
       <VMName>
-        <Prefix>PDTGui</Prefix>
+        <Prefix>PDC-</Prefix>
         <Sequence>1</Sequence>
       </VMName>
       <Processor>2</Processor>
       <Memory>
-        <Startup>1024</Startup>
-        <Minimum>512</Minimum>
-        <Maximum>2048</Maximum>
+        <Startup>2048</Startup>
+        <Minimum>1024</Minimum>
+        <Maximum>4096</Maximum>
         <Buffer>20</Buffer>
       </Memory>
       <NetworkAdapter>
-        <VirtualSwitch>External</VirtualSwitch>
-        <MAC>
-          <Prefix>00:15:5D:65:01:</Prefix>
-          <Sequence>4</Sequence>
-        </MAC>
+        <VirtualSwitch>CorpNet01</VirtualSwitch>
         <IP>
-          <Prefix>192.168.1.</Prefix>
-          <Sequence>1</Sequence>
+          <Prefix>172.21.80.</Prefix>
+          <Sequence>111</Sequence>
           <Mask>24</Mask>
-          <Gateway>192.168.1.254</Gateway>
-          <DNS>192.168.1.1</DNS>
+          <Gateway>172.21.80.1</Gateway>
+          <DNS>172.21.80.21</DNS>
         </IP>
       </NetworkAdapter>
       <OSDisk>
-        <Parent>D:\WS2012R2.vhdx</Parent>
-        <Type>Copy</Type>
+        <Parent>V:\Resources\Pool 1\Parents\PDT_2012R2_GPT_201504.vhdx</Parent>
+        <Type>Differencing</Type>
       </OSDisk>
       <DataDisks>
-        <Count>1</Count>
+        <Count>0</Count>
         <Format>VHDX</Format>
         <Size>100</Size>
       </DataDisks>
       <DVD>False</DVD>
+      <AutoStop>TurnOff</AutoStop>
       <AutoStart>
         <Action>Nothing</Action>
         <Delay>0</Delay>
       </AutoStart>
       <JoinDomain>
-        <Domain>demosc.local</Domain>
+        <Domain>CloudOS2012R2.local</Domain>
         <Credentials>
-          <Domain>demosc.local</Domain>
-          <Password>Password01</Password>
-          <Username>svcinstaller</Username>
+          <Domain>CloudOS2012R2.local</Domain>
+          <Password>!Reset123</Password>
+          <Username>!installer</Username>
         </Credentials>
         <OrganizationalUnit>Servers</OrganizationalUnit>
       </JoinDomain>
-      <AdministratorPassword>Password01</AdministratorPassword>
+      <AdministratorPassword>!Reset123</AdministratorPassword>
+      <TimeZone>GMT Standard Time</TimeZone>
     </Default>
+    <Domain>
+      <Name>CloudOS2012R2.local</Name>
+      <ServiceAccountOU>Services</ServiceAccountOU>
+      <GroupOU>Groups</GroupOU>
+    </Domain>
+    <VM Count="1">
+      <VMName>PDC-AD-DC1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.21</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
     <VM Count="2">
-      <VMName>IN01</VMName>
+      <VMName>PDC-AD-CA1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.22</Address>
+        </IP>
+      </NetworkAdapter>
     </VM>
     <VM Count="3">
-      <VMName>RD01</VMName>
+      <VMName>PDC-AD-STS1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.23</Address>
+        </IP>
+      </NetworkAdapter>
     </VM>
     <VM Count="4">
-      <VMName>DB01</VMName>
-      <Memory>
-        <Startup>1024</Startup>
-        <Minimum>512</Minimum>
-        <Maximum>6144</Maximum>
-        <Buffer>5</Buffer>
-      </Memory>
-      <DataDisks>
-        <Count>3</Count>
-        <Format>VHDX</Format>
-        <Size>100</Size>
-      </DataDisks>
+      <VMName>PDC-FS-SMB1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.24</Address>
+        </IP>
+      </NetworkAdapter>
     </VM>
     <VM Count="5">
-      <VMName>OR01</VMName>
-    </VM>
-    <VM Count="6">
-      <VMName>DB02</VMName>
-      <DataDisks>
-        <Count>6</Count>
-        <Format>VHDX</Format>
-        <Size>100</Size>
-      </DataDisks>
-      <Memory>
-        <Startup>1024</Startup>
-        <Minimum>512</Minimum>
-        <Maximum>6144</Maximum>
-        <Buffer>5</Buffer>
-      </Memory>
-    </VM>
-    <VM Count="7">
-      <VMName>OM01</VMName>
-      <Memory>
-        <Startup>1024</Startup>
-        <Minimum>512</Minimum>
-        <Maximum>4096</Maximum>
-        <Buffer>20</Buffer>
-      </Memory>
-    </VM>
-    <VM Count="8">
-      <VMName>DB03</VMName>
-      <Memory>
-        <Startup>1024</Startup>
-        <Minimum>512</Minimum>
-        <Maximum>6144</Maximum>
-        <Buffer>5</Buffer>
-      </Memory>
-      <DataDisks>
-        <Count>6</Count>
-        <Format>VHDX</Format>
-        <Size>100</Size>
-      </DataDisks>
-    </VM>
-    <VM Count="9">
-      <VMName>SM01</VMName>
-      <Memory>
-        <Startup>1024</Startup>
-        <Minimum>512</Minimum>
-        <Maximum>6144</Maximum>
-        <Buffer>5</Buffer>
-      </Memory>
-      <DataDisks>
-        <Count>3</Count>
-        <Format>VHDX</Format>
-        <Size>100</Size>
-      </DataDisks>
-    </VM>
-    <VM Count="10">
-      <VMName>SM02</VMName>
-      <Memory>
-        <Startup>1024</Startup>
-        <Minimum>512</Minimum>
-        <Maximum>4096</Maximum>
-        <Buffer>20</Buffer>
-      </Memory>
-    </VM>
-    <VM Count="11">
-      <VMName>SM03</VMName>
+      <VMName>PDC-DB-SQL1</VMName>
       <NetworkAdapter>
-        <Identifier>Local Area Connection</Identifier>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.25</Address>
+        </IP>
       </NetworkAdapter>
-      <OSDisk>
-        <Parent>H:\MasterVHDX\Master_WS2008R2.vhdx</Parent>
-        <Type>Copy</Type>
-      </OSDisk>
-    </VM>
-    <VM Count="12">
-      <VMName>VMM01</VMName>
-      <Memory>
-        <Startup>2048</Startup>
-        <Minimum>2048</Minimum>
-        <Maximum>2048</Maximum>
-        <Buffer>20</Buffer>
-      </Memory>
-    </VM>
-    <VM Count="13">
-      <VMName>CM01</VMName>
-      <Memory>
-        <Startup>1024</Startup>
-        <Minimum>512</Minimum>
-        <Maximum>4096</Maximum>
-        <Buffer>5</Buffer>
-      </Memory>
-      <DataDisks>
-        <Count>5</Count>
-        <Format>VHDX</Format>
-        <Size>100</Size>
-      </DataDisks>
-    </VM>
-    <VM Count="14">
-      <VMName>DPM01</VMName>
-      <Memory>
-        <Startup>1024</Startup>
-        <Minimum>512</Minimum>
-        <Maximum>2048</Maximum>
-        <Buffer>5</Buffer>
-      </Memory>
-      <DataDisks>
-        <Count>4</Count>
-        <Format>VHDX</Format>
-        <Size>100</Size>
-      </DataDisks>
       <DataDisks>
         <Count>1</Count>
         <Format>VHDX</Format>
-        <Size>1024</Size>
+        <Size>150</Size>
       </DataDisks>
+    </VM>
+    <VM Count="6">
+      <VMName>PDC-SC-VMM1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.26</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="7">
+      <VMName>PDC-SC-APPC1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.27</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="8">
+      <VMName>PDC-SC-OM1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.28</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="9">
+      <VMName>PDC-SC-OMRPT1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.29</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="10">
+      <VMName>PDC-SC-O1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.30</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="11">
+      <VMName>PDC-SC-SMMS1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.31</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="12">
+      <VMName>PDC-SC-SMDW1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.32</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="13">
+      <VMName>PDC-SC-REPORT1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.33</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="14">
+      <VMName>PDC-SC-SPF1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.34</Address>
+        </IP>
+      </NetworkAdapter>
     </VM>
     <VM Count="15">
-      <VMName>WAP01</VMName>
-      <Memory>
-        <Startup>1024</Startup>
-        <Minimum>512</Minimum>
-        <Maximum>6144</Maximum>
-        <Buffer>5</Buffer>
-      </Memory>
+      <VMName>PDC-SC-SMA1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.35</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="16">
+      <VMName>PDC-N1KV-VSM1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.36</Address>
+        </IP>
+      </NetworkAdapter>
+      <VMGeneration>1</VMGeneration>
+    </VM>
+    <VM Count="17">
+      <VMName>PDC-N1KV-VSM2</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.37</Address>
+        </IP>
+      </NetworkAdapter>
+      <VMGeneration>1</VMGeneration>
+    </VM>
+    <VM Count="18">
+      <VMName>PDC-DB-SCDB1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.38</Address>
+        </IP>
+      </NetworkAdapter>
       <DataDisks>
-        <Count>4</Count>
+        <Count>1</Count>
         <Format>VHDX</Format>
-        <Size>100</Size>
+        <Size>150</Size>
       </DataDisks>
     </VM>
-    <VM Count="1">
-      <VMName>DC01</VMName>
+    <VM Count="19">
+      <VMName>PDC-DB-SCVMM1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.39</Address>
+        </IP>
+      </NetworkAdapter>
+      <DataDisks>
+        <Count>1</Count>
+        <Format>VHDX</Format>
+        <Size>150</Size>
+      </DataDisks>
     </VM>
-    <Domain>
-      <Name>DEMOSC.local</Name>
-      <ServiceAccountOU>Users</ServiceAccountOU>
-      <GroupOU>Groups</GroupOU>
-    </Domain>
+    <VM Count="20">
+      <VMName>PDC-DB-SCOMDB1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.40</Address>
+        </IP>
+      </NetworkAdapter>
+      <DataDisks>
+        <Count>1</Count>
+        <Format>VHDX</Format>
+        <Size>150</Size>
+      </DataDisks>
+    </VM>
+    <VM Count="21">
+      <VMName>PDC-DB-SCOMDW1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.41</Address>
+        </IP>
+      </NetworkAdapter>
+      <DataDisks>
+        <Count>1</Count>
+        <Format>VHDX</Format>
+        <Size>150</Size>
+      </DataDisks>
+    </VM>
+    <VM Count="22">
+      <VMName>PDC-DB-SCSMDB1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.42</Address>
+        </IP>
+      </NetworkAdapter>
+      <DataDisks>
+        <Count>1</Count>
+        <Format>VHDX</Format>
+        <Size>150</Size>
+      </DataDisks>
+    </VM>
+    <VM Count="23">
+      <VMName>PDC-DB-SCSMDW1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.43</Address>
+        </IP>
+      </NetworkAdapter>
+      <DataDisks>
+        <Count>1</Count>
+        <Format>VHDX</Format>
+        <Size>150</Size>
+      </DataDisks>
+    </VM>
+    <VM Count="24">
+      <VMName>PDC-DB-SCSMAS1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.44</Address>
+        </IP>
+      </NetworkAdapter>
+      <DataDisks>
+        <Count>1</Count>
+        <Format>VHDX</Format>
+        <Size>150</Size>
+      </DataDisks>
+    </VM>
+
+	<VM Count="25">
+      <VMName>WAP-DB-SQL01</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.45</Address>
+        </IP>
+      </NetworkAdapter>
+      <DataDisks>
+        <Count>1</Count>
+        <Format>VHDX</Format>
+        <Size>25</Size>
+      </DataDisks>
+    </VM>
+    <VM Count="26">
+      <VMName>WAP-WS-PRIVATE1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.46</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="27">
+      <VMName>WAP-WS-PUBLIC1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.47</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+	
+    <VM Count="28">
+      <VMName>WEB-FS-SMB1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.48</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="29">
+      <VMName>WEB-DB-SQL1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.49</Address>
+        </IP>
+      </NetworkAdapter>
+      <DataDisks>
+        <Count>1</Count>
+        <Format>VHDX</Format>
+        <Size>25</Size>
+      </DataDisks>
+    </VM>
+    <VM Count="30">
+      <VMName>WEB-WS-CONTROL1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.50</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="31">
+      <VMName>WEB-WS-MANAGE1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.51</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="32">
+      <VMName>WEB-WS-PUBLISH1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.52</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="33">
+      <VMName>WEB-WS-FRONT1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.53</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="34">
+      <VMName>WEB-WS-WORKSTD1</VMName>
+	  <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.54</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="35">
+      <VMName>WEB-WS-WORKSTD2</VMName>
+	  <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.55</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="36">
+      <VMName>WEB-WS-WORKRS1</VMName>
+	  <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.56</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="37">
+      <VMName>WEB-WS-WORKRS2</VMName>
+	  <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.57</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+	
   </VMs>
-  <Variable Name="InstallerServiceAccount" Value="DEMOSC\svcInstaller" />
-  <Variable Name="InstallerServiceAccountPassword" Value="Password01" />
-  <Variable Name="SourcePath" Value="$SystemDrive\Temp" />
-  <Variable Name="Download" Value="C:\Installer" />
-  <Variable Name="RegisteredUser" Value="Benedict Berger" />
-  <Variable Name="RegisteredOrganization" Value="Elanity Network Partner" />
+  <Variable Name="SystemCenter2012ProductKey" Value="BXH69-M62YX-QQD6R-3GPWX-8WMFY" />
+  <Variable Name="SQLServer2012ProductKey" Value="YFC4R-BRRWB-TVP9Y-6WJQ9-MCJQ7" />
+  <Variable Name="InstallerServiceAccount" Value="CloudOS2012R2\!Installer" />
+  <Variable Name="InstallerServiceAccountPassword" Value="!Reset123" />
+  <Variable Name="SourcePath" Value="$SystemDrive\Source" />
+  <Variable Name="TempPath" Value="$SystemDrive\Temp" />
+  <Variable Name="Download" Value="W:\Workspace\Installer" />
+  <Variable Name="RegisteredUser" Value="Damian Flynn MVP" />
+  <Variable Name="RegisteredOrganization" Value="DamianFlynn.com" />
+  <Variable Name="MicrosoftUpdate" Value="1" />
+  <Variable Name="CustomerExperienceImprovementProgram" Value="1" />
+  <Variable Name="ErrorReporting" Value="1" />
+  <Variable Name="OperationalDataReporting" Value="1" />
 </Installer>
