@@ -29,7 +29,7 @@
   <Roles>
     <Role Name="SQL Server 2012 Management Tools" Server="WEB-DB-SQL1.WebFarm.local" />
     <Role Name="SQL Server 2012 Database Server" Server="WEB-DB-SQL1.WebFarm.local" Instance="MSSQLSERVER" />
-    <Role Name="Windows Azure Pack 2013 Web Sites Database Server" Server="WEB-DB-SQL1.WebFarm.local" Instance="" />
+    <Role Name="Windows Azure Pack 2013 Web Sites Database Server" Server="WEB-DB-SQL1.WebFarm.local" Instance="MSSQLSERVER" />
     <Role Name="Windows Azure Pack 2013 Web Sites File Server" Server="WEB-FS-SMB1.WebFarm.local" />
     <Role Name="Windows Azure Pack 2013 Web Sites Controller Server" Server="WEB-WS-CONTROL1.WebFarm.local" />
     <Role Name="Windows Azure Pack 2013 Web Sites Management Server" Server="WEB-WS-MANAGE1.WebFarm.local" />
@@ -77,10 +77,10 @@
         <VirtualSwitch>CorpNet01</VirtualSwitch>
         <IP>
           <Prefix>172.21.80.</Prefix>
-          <Sequence>111</Sequence>
+          <Sequence>231</Sequence>
           <Mask>24</Mask>
           <Gateway>172.21.80.1</Gateway>
-          <DNS>172.21.80.21</DNS>
+          <DNS>172.21.80.231</DNS>
         </IP>
       </NetworkAdapter>
       <OSDisk>
@@ -120,7 +120,7 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.121</Address>
+          <Address>172.21.80.231</Address>
         </IP>
       </NetworkAdapter>
     </VM>
@@ -129,7 +129,7 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.21.122</Address>
+          <Address>172.21.80.232</Address>
         </IP>
       </NetworkAdapter>
     </VM>
@@ -138,7 +138,7 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.123</Address>
+          <Address>172.21.80.233</Address>
         </IP>
       </NetworkAdapter>
       <DataDisks>
@@ -152,7 +152,7 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.21.124</Address>
+          <Address>172.21.80.234</Address>
         </IP>
       </NetworkAdapter>
     </VM>
@@ -161,7 +161,16 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.125</Address>
+          <Address>172.21.80.235</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+	<VM Count="6">
+      <VMName>WEB-WS-FRONT1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.236</Address>
         </IP>
       </NetworkAdapter>
     </VM>
@@ -170,34 +179,45 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.127</Address>
-        </IP>
-      </NetworkAdapter>
-    </VM>
-    <VM Count="6">
-      <VMName>WEB-WS-FRONT1</VMName>
-      <NetworkAdapter>
-        <VirtualSwitch>CorpNet01</VirtualSwitch>
-        <IP>
-          <Prefix>172.21.80.126</Prefix>
-          <Sequence>111</Sequence>
-          <Mask>24</Mask>
-          <Gateway>172.21.80.1</Gateway>
-          <DNS>172.21.80.21</DNS>
+          <Address>172.21.80.237</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="8">
       <VMName>WEB-WS-WORKSTD1</VMName>
+          <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.238</Address>
+        </IP>
+      </NetworkAdapter>
     </VM>
     <VM Count="9">
       <VMName>WEB-WS-WORKSTD2</VMName>
+          <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.239</Address>
+        </IP>
+      </NetworkAdapter>
     </VM>
     <VM Count="10">
       <VMName>WEB-WS-WORKRS1</VMName>
+          <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.240</Address>
+        </IP>
+      </NetworkAdapter>
     </VM>
     <VM Count="11">
       <VMName>WEB-WS-WORKRS2</VMName>
+          <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.241</Address>
+        </IP>
+      </NetworkAdapter>
     </VM>
   </VMs>
   <Variable Name="SystemCenter2012ProductKey" Value="BXH69-M62YX-QQD6R-3GPWX-8WMFY" />
