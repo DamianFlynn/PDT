@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Validation information for PDT GUI-->
+<!--
+Validation Blocks v1.0.0.13:
+ValidateProductKey  			"^[a-zA-Z0-9]{5}-[a-zA-Z0-9]{5}-[a-zA-Z0-9]{5}-[a-zA-Z0-9]{5}-[a-zA-Z0-9]{5}$"
+Validate1Or0 (one or zero)   	"^[0-1]{1}$"
+ValidatePath					"^([a-zA-Z]:|\\\\[a-zA-Z0-9]+\\(?!\.)[^\r\n$<>]+\$?)(\\|(\\(?!\.)[^\r\n<>\\]+)*)(?<!\\)$"
+ValidateAccount 				"^.+@.+|.+\\.+$" -adds a button with directory object picker to select group or user
+ValidateAlphanumeric  			"^[0-9a-zA-Z]$"
+ValidateNumeric 				"^[0-9]$"
+ValidateNumericCPU				^6[0-4]|[1-5][0-9]|[1-9]$
+ValidateNumericPercent			"^10{2}|[1-9][0-9]|[1-9]$"
+ValidateMACAddress				not implemented yet
+ValidateNumericRam				
+
+ValidateAnyNonEmpty <- Any dynamic textbox (variable) will be validated against this block if it is not listed below to prevent empty values... Keep in mind that only Values that have a checkbox checked have a validating block 
+and an error provider
+-->
+<ValidationInfo>
+	<Validate ValueName="SystemCenter2012ProductKey" ValidationBlock="ValidateProductKey"/>
+	<Validate ValueName="SQLServer2008R2ProductKey" ValidationBlock="ValidateProductKey"/>
+	<Validate ValueName="SQLServer2012ProductKey" ValidationBlock="ValidateProductKey"/>
+	<Validate ValueName="MicrosoftUpdate" ValidationBlock="Validate1Or0"/>
+	<Validate ValueName="Download" ValidationBlock="ValidatePath"/>
+	<Validate ValueName="InstallerServiceAccount" ValidationBlock="ValidateAccount"/>
+	<Validate ValueName="SourcePath" ValidationBlock="ValidatePath"/>
+	<Validate ValueName="TempPath" ValidationBlock="ValidatePath"/>
+	<!--<Validate ValueName="RegisteredUser" ValidationBlock="ValidateAlphanumeric"/>
+	<Validate ValueName="RegisteredOrganization" ValidationBlock="ValidateAlphanumeric"/>-->
+	<Validate ValueName="MicrosoftUpdate" ValidationBlock="Validate1Or0"/>
+	<Validate ValueName="CustomerExperienceImprovementProgram" ValidationBlock="Validate1Or0"/>
+	<Validate ValueName="ErrorReporting" ValidationBlock="Validate1Or0"/>
+	<Validate ValueName="OperationalDataReporting" ValidationBlock="Validate1Or0"/>
+	<Validate ValueName="Startup" ValidationBlock="ValidateNumericRam"/>
+	<Validate ValueName="Minimum" ValidationBlock="ValidateNumericRam"/>
+	<Validate ValueName="Maximum" ValidationBlock="ValidateNumericRam"/>
+	<Validate ValueName="Type" ValidationBlock="ValidateDropDown" Values="ValidateDiskType"/>
+	<Validate ValueName="Host" ValidationBlock="ValidateComputername"/>
+	<Validate ValueName="Processor" ValidationBlock="ValidateNumericCPU" Min="1" Max="64"/>
+	<Validate ValueName="Buffer" ValidationBlock="ValidateNumericPercent" />
+	<Validate ValueName="Sequence" ValidationBlock="ValidateNumeric" />
+	<Validate ValueName="Mask" ValidationBlock="ValidateNumeric" />
+	<Validate ValueName="Size" ValidationBlock="ValidateNumeric" />
+	<Validate ValueName="Count" ValidationBlock="ValidateNumeric" />
+	<Validate ValueName="Format" ValidationBlock="ValidateDropDown" Values="ValidateDiskFormat"/>
+	<Validate ValueName="Gateway" ValidationBlock="ValidateIPAddress"/>
+	<Validate ValueName="DNS" ValidationBlock="ValidateIPAddress"/>
+	<ValidateDiskType>
+		<Value>Differencing</Value>
+		<Value>Dynamic</Value>
+		<Value>Fixed</Value>
+	</ValidateDiskType>
+	<ValidateDiskFormat>
+		<Value>VHD</Value>
+		<Value>VHDX</Value>
+	</ValidateDiskFormat>
+</ValidationInfo>
