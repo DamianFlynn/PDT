@@ -99,7 +99,6 @@
     </Component>
   </Components>
   <Roles>
-  
 	
 	<!-- SCOM 2012 R2 -->
 	  
@@ -109,6 +108,7 @@
     <Role Name="System Center 2012 R2 Operations Manager Reporting Server" Server="PDC-SC-OMRPT1.CloudOS2012R2.local" Instance="SCOMASRS" />
     <Role Name="System Center 2012 R2 Operations Manager Web Console Server" Server="PDC-SC-OM1.CloudOS2012R2.local" />
     <Role Name="System Center 2012 R2 Operations Manager Console" Server="PDC-SC-OM1.CloudOS2012R2.local" />
+	<Role Name="System Center 2012 R2 Operations Manager Console" Server="PDC-RD-APPS1.CloudOS2012R2.local" />
     <Role Name="SQL Server 2012 Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCOMDB" />
 	<Role Name="SQL Server 2012 Fulltext" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCOMDB" />
 	<Role Name="SQL Server 2012 Database Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCOMDW" />
@@ -125,6 +125,7 @@
     <Role Name="System Center 2012 R2 Virtual Machine Manager PXE Server" Server="PDC-FS-SMB1.CloudOS2012R2.local" />
     <Role Name="System Center 2012 R2 Virtual Machine Manager Update Server" Server="PDC-FS-SMB1.CloudOS2012R2.local" />
     <Role Name="System Center 2012 R2 Virtual Machine Manager Console" Server="PDC-SC-VMM1.CloudOS2012R2.local" />
+	<Role Name="System Center 2012 R2 Virtual Machine Manager Console" Server="PDC-RD-APPS1.CloudOS2012R2.local" />
 	
 	<!-- SCO 2012 R2 -->
 	
@@ -135,6 +136,7 @@
     <Role Name="System Center 2012 R2 Orchestrator Primary Runbook Server" Server="PDC-SC-O1.CloudOS2012R2.local" />
     <Role Name="System Center 2012 R2 Orchestrator Web Components Server" Server="PDC-SC-O1.CloudOS2012R2.local" />
     <Role Name="System Center 2012 R2 Orchestrator Runbook Designer" Server="PDC-SC-O1.CloudOS2012R2.local" />
+	<Role Name="System Center 2012 R2 Orchestrator Runbook Designer" Server="PDC-RD-APPS1.CloudOS2012R2.local" />
 
 	<!-- SMA 2012 R2 -->
 	
@@ -159,6 +161,7 @@
     <Role Name="Windows Azure Pack 2013 Tenant Authentication Site Server" Server="WAP-WS-PUBLIC1.CloudOS2012R2.local" />
     <Role Name="Windows Azure Pack 2013 Tenant Site Server" Server="WAP-WS-PUBLIC1.CloudOS2012R2.local" />
     <Role Name="Windows Azure Pack 2013 Console" Server="WAP-WS-PRIVATE1.CloudOS2012R2.local" />
+	<Role Name="Windows Azure Pack 2013 Console" Server="PDC-RD-APPS1.CloudOS2012R2.local" />
 	
 	<!-- Web Farm -->
 	<Role Name="SQL Server 2012 Management Tools" Server="WEB-DB-SQL1.CloudOS2012R2.local" />
@@ -180,10 +183,10 @@
     <Role Name="SQL Server 2012 Analysis Server" Server="PDC-SC-REPORT1.CloudOS2012R2.local" Instance="SCSRDWAS" />
 	<Role Name="SQL Server 2012 Database Server" Server="PDC-SC-SQL1.CloudOS2012R2.local" Instance="SCSRDWAS" />
     <Role Name="SQL Server 2012 Integration Server" Server="PDC-SC-REPORT1.CloudOS2012R2.local" Instance="SCSRDWAS" />
-	-->
 	<Role Name="System Center 2012 R2 Service Reporting Datawarehouse Server" Server="PDC-DB-SQL1.CloudOS2012R2.local" Instance="SCSRDWAS" />
     <Role Name="System Center 2012 R2 Service Reporting Analysis Server" Server="PDC-SC-REPORT1.CloudOS2012R2.local" Instance="SCSRDWAS" />
     <Role Name="System Center 2012 R2 Service Reporting Server" Server="PDC-SC-REPORT1.CloudOS2012R2.local" />
+	-->
 	
 	<!-- Service Manager -->
 	<!--
@@ -200,6 +203,8 @@
     <Role Name="System Center 2012 R2 Service Manager Reporting Server" Server="PDC-SC-SMDW1.CloudOS2012R2.local" />
 	<Role Name="System Center 2012 R2 Service Manager Datawarehouse Management Server" Server="PDC-SC-SMDW1.CloudOS2012R2.local" />
 	<Role Name="System Center 2012 R2 Service Manager Console" Server="PDC-SC-SMMS1.CloudOS2012R2.local" />
+	<Role Name="System Center 2012 R2 Service Manager Console" Server="PDC-RD-APPS1.CloudOS2012R2.local" />
+	
 	-->
   </Roles>
   <SQL>
@@ -362,7 +367,7 @@
 	
   </SQL>
   <VMs>
-    <Count>30</Count>
+    <Count>31</Count>
     <Default>
       <Host>Localhost</Host>
       <VMFolder>V:\Resources\Pool 1\Resources\CloudOS2012R2.local</VMFolder>
@@ -721,7 +726,15 @@
         </IP>
       </NetworkAdapter>
     </VM>
-	
+	<VM Count="31">
+      <VMName>PDC-RD-APPS1</VMName>
+      <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.58</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
   </VMs>
   <Variable Name="SystemCenter2012ProductKey" Value="BXH69-M62YX-QQD6R-3GPWX-8WMFY" />
   <Variable Name="SQLServer2012ProductKey" Value="YFC4R-BRRWB-TVP9Y-6WJQ9-MCJQ7" />
