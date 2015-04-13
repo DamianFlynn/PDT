@@ -161,7 +161,6 @@
     <Role Name="Windows Azure Pack 2013 Tenant Authentication Site Server" Server="WAP-WS-PUBLIC1.CloudOS2012R2.local" />
     <Role Name="Windows Azure Pack 2013 Tenant Site Server" Server="WAP-WS-PUBLIC1.CloudOS2012R2.local" />
     <Role Name="Windows Azure Pack 2013 Console" Server="WAP-WS-PRIVATE1.CloudOS2012R2.local" />
-	<Role Name="Windows Azure Pack 2013 Console" Server="PDC-RD-APPS1.CloudOS2012R2.local" />
 	
 	<!-- Web Farm -->
 	<Role Name="SQL Server 2012 Management Tools" Server="WEB-DB-SQL1.CloudOS2012R2.local" />
