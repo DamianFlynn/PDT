@@ -4,25 +4,25 @@
   <Variable Name="DebugPS" Value="True" />
   <Components>
     <Component Name="Windows Azure Pack 2013 Web Sites">
-      <Variable Name="WindowsAzurePack2013WebSitesServerAdminGroup" Value="WebFarm\Admins Web Sites Servers" />
-      <Variable Name="WindowsAzurePack2013WebSitesCloudAdmin" Value="WebFarm\WebCloudAdmin" />
+      <Variable Name="WindowsAzurePack2013WebSitesServerAdminGroup" Value="WebFarm\!admin WEB Servers Admins" />
+      <Variable Name="WindowsAzurePack2013WebSitesCloudAdmin" Value="WebFarm\!svcWEB_CloudAdmin" />
       <Variable Name="WindowsAzurePack2013WebSitesCloudAdminPassword" Value="!Reset123" />
-      <Variable Name="WindowsAzurePack2013WebSitesDNSSuffix" Value="web.diginerve.net" />
-      <Variable Name="WindowsAzurePack2013WebSitesFileServerAdminServiceAccount" Value="WebFarm\!svcFSAdmin" />
+      <Variable Name="WindowsAzurePack2013WebSitesDNSSuffix" Value="websites.diginerve.net" />
+      <Variable Name="WindowsAzurePack2013WebSitesFileServerAdminServiceAccount" Value="WebFarm\!svcFS_Admin" />
       <Variable Name="WindowsAzurePack2013WebSitesFileServerAdminServiceAccountPassword" Value="!Reset123" />
-      <Variable Name="WindowsAzurePack2013WebSitesFileShareOwnerServiceAccount" Value="WebFarm\!svcFSFileOwner" />
+      <Variable Name="WindowsAzurePack2013WebSitesFileShareOwnerServiceAccount" Value="WebFarm\!svcFS_ADMFiles" />
       <Variable Name="WindowsAzurePack2013WebSitesFileShareOwnerServiceAccountPassword" Value="!Reset123" />
-      <Variable Name="WindowsAzurePack2013WebSitesFileShareUserServiceAccount" Value="WebFarm\!svcFSFileUser" />
+      <Variable Name="WindowsAzurePack2013WebSitesFileShareUserServiceAccount" Value="WebFarm\!svcFS_USRFiles" />
       <Variable Name="WindowsAzurePack2013WebSitesFileShareUserServiceAccountPassword" Value="!Reset123" />
-      <Variable Name="WindowsAzurePack2013WebSitesCertificateShareUserServiceAccount" Value="WebFarm\!svcFSCertUser" />
+      <Variable Name="WindowsAzurePack2013WebSitesCertificateShareUserServiceAccount" Value="WebFarm\!svcFS_USRCerts" />
       <Variable Name="WindowsAzurePack2013WebSitesCertificateShareUserServiceAccountPassword" Value="!Reset123" />
-      <Variable Name="WindowsAzurePack2013WebSitesManagementServerAdminServiceAccount" Value="WebFarm\!svcWSManager" />
+      <Variable Name="WindowsAzurePack2013WebSitesManagementServerAdminServiceAccount" Value="WebFarm\!svcWEB_Manager" />
       <Variable Name="WindowsAzurePack2013WebSitesManagementServerAdminServiceAccountPassword" Value="!Reset123" />
-      <Variable Name="WindowsAzurePack2013WebSitesPublisherAdminServiceAccount" Value="WebFarm\!svcWSPublisher" />
+      <Variable Name="WindowsAzurePack2013WebSitesPublisherAdminServiceAccount" Value="WebFarm\!svcWEB_Publisher" />
       <Variable Name="WindowsAzurePack2013WebSitesPublisherAdminServiceAccountPassword" Value="!Reset123" />
-      <Variable Name="WindowsAzurePack2013WebSitesFrontEndAdminServiceAccount" Value="WebFarm\!svcWSFrontEnd" />
+      <Variable Name="WindowsAzurePack2013WebSitesFrontEndAdminServiceAccount" Value="WebFarm\!svcWEB_Frontend" />
       <Variable Name="WindowsAzurePack2013WebSitesFrontEndAdminServiceAccountPassword" Value="!Reset123" />
-      <Variable Name="WindowsAzurePack2013WebSitesWorkerAdminServiceAccount" Value="WebFarm\!svcWSWorker" />
+      <Variable Name="WindowsAzurePack2013WebSitesWorkerAdminServiceAccount" Value="WebFarm\!svcWEB_Worker" />
       <Variable Name="WindowsAzurePack2013WebSitesWorkerAdminServiceAccountPassword" Value="!Reset123" />
     </Component>
   </Components>
@@ -37,15 +37,15 @@
     <Role Name="Windows Azure Pack 2013 Web Sites Publisher Server" Server="WEB-WS-PUBLISH1.WebFarm.local" />
     <Role Name="Windows Azure Pack 2013 Web Sites Shared Worker Server" Server="WEB-WS-WORKSTD1.WebFarm.local" />
     <Role Name="Windows Azure Pack 2013 Web Sites Shared Worker Server" Server="WEB-WS-WORKSTD2.WebFarm.local" />
-    <Role Name="Windows Azure Pack 2013 Web Sites Reserved Small Worker Server" Server="WEB-WS-WORKRS1.WebFarm.local" />
-    <Role Name="Windows Azure Pack 2013 Web Sites Reserved Small Worker Server" Server="WEB-WS-WORKRS2.WebFarm.local" />
+    <Role Name="Windows Azure Pack 2013 Web Sites Reserved Small Worker Server" Server="WEB-WS-WORKRES1.WebFarm.local" />
+    <Role Name="Windows Azure Pack 2013 Web Sites Reserved Small Worker Server" Server="WEB-WS-WORKRES2.WebFarm.local" />
   </Roles>
   <SQL>
     <Instance Server="WEB-DB-SQL1.WebFarm.local" Instance="MSSQLSERVER" Version="SQL Server 2012">
-      <Variable Name="SQLAdmins" Value="WebFarm\Admins SQL WEB-DB-SQL01 MSSQLSERVER" />
-      <Variable Name="SQLAgtServiceAccount" Value="WebFarm\!svcSQLDBWAP" />
+      <Variable Name="SQLAdmins" Value="WebFarm\!admin SQL WEB-DB-SQL01 MSSQLSERVER" />
+      <Variable Name="SQLAgtServiceAccount" Value="WebFarm\!svcSQL_DB_DEFAULT" />
       <Variable Name="SQLAgtServiceAccountPassword" Value="!Reset123" />
-      <Variable Name="SQLServiceAccount" Value="WebFarm\!svcSQLDBWAP" />
+      <Variable Name="SQLServiceAccount" Value="WebFarm\!svcSQL_DB_DEFAULT" />
       <Variable Name="SQLServiceAccountPassword" Value="!Reset123" />
       <Variable Name="SQLInstallSQLDataDir" Value="C:\Program Files\Microsoft SQL Server" />
       <Variable Name="SQLUserDBDir" Value="D:\Microsoft SQL Server\MSSQL11.$Instance\MSSQL\Data" />
@@ -55,7 +55,7 @@
     </Instance>
   </SQL>
   <VMs>
-    <Count>11</Count>
+    <Count>12</Count>
     <Default>
       <Host>Localhost</Host>
       <VMFolder>V:\Resources\Pool 1\Resources\WebFarm.local</VMFolder>
@@ -174,8 +174,8 @@
         </IP>
       </NetworkAdapter>
     </VM>
-    <VM Count="7">
-      <VMName>WEB-WS-PUBLISH1</VMName>
+		<VM Count="7">
+      <VMName>WEB-WS-FRONT2</VMName>
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
@@ -184,8 +184,8 @@
       </NetworkAdapter>
     </VM>
     <VM Count="8">
-      <VMName>WEB-WS-WORKSTD1</VMName>
-          <NetworkAdapter>
+      <VMName>WEB-WS-PUBLISH1</VMName>
+      <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
           <Address>172.21.80.238</Address>
@@ -193,7 +193,7 @@
       </NetworkAdapter>
     </VM>
     <VM Count="9">
-      <VMName>WEB-WS-WORKSTD2</VMName>
+      <VMName>WEB-WS-WORKSTD1</VMName>
           <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
@@ -202,7 +202,7 @@
       </NetworkAdapter>
     </VM>
     <VM Count="10">
-      <VMName>WEB-WS-WORKRS1</VMName>
+      <VMName>WEB-WS-WORKSTD2</VMName>
           <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
@@ -211,11 +211,20 @@
       </NetworkAdapter>
     </VM>
     <VM Count="11">
-      <VMName>WEB-WS-WORKRS2</VMName>
+      <VMName>WEB-WS-WORKRES1</VMName>
           <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
           <Address>172.21.80.241</Address>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+    <VM Count="12">
+      <VMName>WEB-WS-WORKRES2</VMName>
+          <NetworkAdapter>
+        <VLANID>180</VLANID>
+        <IP>
+          <Address>172.21.80.242</Address>
         </IP>
       </NetworkAdapter>
     </VM>
