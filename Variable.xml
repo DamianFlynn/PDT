@@ -303,11 +303,11 @@
       <NetworkAdapter>
         <VirtualSwitch>CorpNet01</VirtualSwitch>
         <IP>
-          <Prefix>172.21.80.</Prefix>
+          <Prefix>172.21.10.</Prefix>
           <Sequence>111</Sequence>
           <Mask>24</Mask>
-          <Gateway>172.21.80.1</Gateway>
-          <DNS>172.21.80.21</DNS>
+          <Gateway>172.21.10.1</Gateway>
+          <DNS>172.21.10.21</DNS>
         </IP>
       </NetworkAdapter>
       <OSDisk>
@@ -345,45 +345,45 @@
     <VM Count="1">
       <VMName>PDC-AD-DC1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.21</Address>
+          <Address>172.21.10.21</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="2">
       <VMName>PDC-AD-CA1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.22</Address>
+          <Address>172.21.10.22</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="3">
       <VMName>PDC-AD-STS1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.23</Address>
+          <Address>172.21.10.23</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="4">
       <VMName>PDC-FS-SMB1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.24</Address>
+          <Address>172.21.10.24</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="5">
       <VMName>PDC-DB-SQL1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.25</Address>
+          <Address>172.21.10.25</Address>
         </IP>
       </NetworkAdapter>
       <DataDisks>
@@ -395,99 +395,99 @@
     <VM Count="6">
       <VMName>PDC-SC-VMM1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.26</Address>
+          <Address>172.21.10.26</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="7">
       <VMName>PDC-SC-APPC1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.27</Address>
+          <Address>172.21.10.27</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="8">
       <VMName>PDC-SC-OM1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.28</Address>
+          <Address>172.21.10.28</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="9">
       <VMName>PDC-SC-OMRPT1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.29</Address>
+          <Address>172.21.10.29</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="10">
       <VMName>PDC-SC-O1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.30</Address>
+          <Address>172.21.10.30</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="11">
       <VMName>PDC-SC-SMMS1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.31</Address>
+          <Address>172.21.10.31</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="12">
       <VMName>PDC-SC-SMDW1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.32</Address>
+          <Address>172.21.10.32</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="13">
       <VMName>PDC-SC-REPORT1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.33</Address>
+          <Address>172.21.10.33</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="14">
       <VMName>PDC-SC-SPF1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.34</Address>
+          <Address>172.21.10.34</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="15">
       <VMName>PDC-SC-SMA1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.35</Address>
+          <Address>172.21.10.35</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="16">
       <VMName>PDC-N1KV-VSM1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.36</Address>
+          <Address>172.21.10.36</Address>
         </IP>
       </NetworkAdapter>
       <VMGeneration>1</VMGeneration>
@@ -495,9 +495,9 @@
     <VM Count="17">
       <VMName>PDC-N1KV-VSM2</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.37</Address>
+          <Address>172.21.10.37</Address>
         </IP>
       </NetworkAdapter>
       <VMGeneration>1</VMGeneration>
@@ -505,9 +505,9 @@
     <VM Count="18">
       <VMName>PDC-DB-SCDB1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.38</Address>
+          <Address>172.21.10.38</Address>
         </IP>
       </NetworkAdapter>
       <DataDisks>
@@ -519,9 +519,9 @@
     <VM Count="19">
       <VMName>PDC-DB-SCVMM1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.39</Address>
+          <Address>172.21.10.39</Address>
         </IP>
       </NetworkAdapter>
       <DataDisks>
@@ -533,9 +533,9 @@
     <VM Count="20">
       <VMName>PDC-DB-SCOMDB1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.40</Address>
+          <Address>172.21.10.40</Address>
         </IP>
       </NetworkAdapter>
       <DataDisks>
@@ -547,9 +547,9 @@
     <VM Count="21">
       <VMName>PDC-DB-SCOMDW1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.41</Address>
+          <Address>172.21.10.41</Address>
         </IP>
       </NetworkAdapter>
       <DataDisks>
@@ -561,9 +561,9 @@
     <VM Count="22">
       <VMName>PDC-DB-SCSMDB1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.42</Address>
+          <Address>172.21.10.42</Address>
         </IP>
       </NetworkAdapter>
       <DataDisks>
@@ -575,9 +575,9 @@
     <VM Count="23">
       <VMName>PDC-DB-SCSMDW1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.43</Address>
+          <Address>172.21.10.43</Address>
         </IP>
       </NetworkAdapter>
       <DataDisks>
@@ -589,9 +589,9 @@
     <VM Count="24">
       <VMName>PDC-DB-SCSMAS1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>110</VLANID>
         <IP>
-          <Address>172.21.80.44</Address>
+          <Address>172.21.10.44</Address>
         </IP>
       </NetworkAdapter>
       <DataDisks>
