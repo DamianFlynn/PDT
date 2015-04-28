@@ -37,7 +37,7 @@
     </Instance>
   </SQL>
   <VMs>
-    <Count>6</Count>
+    <Count>7</Count>
     <Default>
       <Host>Localhost</Host>
       <VMFolder>V:\Resources\Pool 1\Resources\AzurePack.local</VMFolder>
@@ -118,9 +118,10 @@
 	<VM Count="3">
       <VMName>WAP-AD-STS1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>190</VLANID>
         <IP>
-          <Address>172.21.80.223</Address>
+          <Address>172.21.90.224</Address>
+		  <Gateway>172.21.90.1</Gateway>
         </IP>
       </NetworkAdapter>
     </VM>
@@ -129,7 +130,7 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.224</Address>
+          <Address>172.21.80.225</Address>
         </IP>
       </NetworkAdapter>
       <DataDisks>
@@ -143,16 +144,27 @@
       <NetworkAdapter>
         <VLANID>180</VLANID>
         <IP>
-          <Address>172.21.80.225</Address>
+          <Address>172.21.80.226</Address>
         </IP>
       </NetworkAdapter>
     </VM>
     <VM Count="6">
       <VMName>WAP-WS-PUBLIC1</VMName>
       <NetworkAdapter>
-        <VLANID>180</VLANID>
+        <VLANID>190</VLANID>
         <IP>
-          <Address>172.21.80.226</Address>
+          <Address>172.21.90.226</Address>
+		  <Gateway>172.21.90.1</Gateway>
+        </IP>
+      </NetworkAdapter>
+    </VM>
+	<VM Count="7">
+      <VMName>WAP-RD-GATE1</VMName>
+      <NetworkAdapter>
+        <VLANID>190</VLANID>
+        <IP>
+          <Address>172.21.90.229</Address>
+		  <Gateway>172.21.90.1</Gateway>
         </IP>
       </NetworkAdapter>
     </VM>
